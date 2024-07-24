@@ -1,27 +1,57 @@
-import React from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { header } from '../static_content';
 
 const Header = () => {
     const location = useLocation();
+    const [open, setOpen] = useState(false);
+    const dropdownRef = useRef(null);
+
+    const handleClickOutside = (event) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+            setOpen(false);
+        }
+    };
+
+    const handleMenuClick = (event) => {
+        setOpen(!open);
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
+
     return (
-        <div className='bg-[#001D44] flex pl-10 pr-16 py-3 items-center justify-between'>
+        <div className='bg-[#001D44] flex px-3 py-1 sm:pl-10 sm:pr-16 sm:py-3 items-center justify-between'>
             <div className='flex items-center'>
-                <Link to='/'>
+                <Link to='/' className='w-[75px]'>
                     <img src='../images/logox75.png' alt='logo' />
                 </Link>
-                <div className='flex gap-10 ml-20'>
-                    <Link to='/' className={location.pathname === '/' ? 'text-[#26FFDA]' : 'text-white'}>Home</Link>
-                    <Link to='/services' className={location.pathname === '/services' ? 'text-[#26FFDA]' : 'text-white'}>Services</Link>
-                    <Link to='/training' className={location.pathname === '/training' ? 'text-[#26FFDA]' : 'text-white'}>Training</Link>
-                    <Link to='/aboutme' className={location.pathname === '/aboutme' ? 'text-[#26FFDA]' : 'text-white'}>About me</Link>
-                    <Link to='/community' className={location.pathname === '/community' ? 'text-[#26FFDA]' : 'text-white'}>Community</Link>
+                <div className='hidden sm:flex sm:gap-5 lg:gap-10 font-semibold sm:ml-5 md:ml-10 lg:ml-20'>
+                    {header.map((link, i) => (
+                        <Link to={link.path} className={location.pathname === link.path ? 'text-[#26FFDA]' : 'text-white'} key={i}>{link.title}</Link>
+                    ))}
                 </div>
             </div>
             <div className='flex items-center gap-5'>
-                <Link to='/notifications'>
+                <Link to='/notifications' className='w-[15px]'>
                     <img src='../images/icons/notification.svg' alt='notification' />
                 </Link>
-                <button className='signup-button button text-white text-xl px-6 py-2 rounded-lg'>Signup</button>
+                <button className='hidden sm:block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato'>Signup</button>
+                <button className='sm:hidden button text-white ml-2 w-[25px]' onClick={handleMenuClick}>
+                    <img src='../images/icons/menu.svg' className='w-full h-full' alt='menu' />
+                </button>
+                {open && <div className='dropdown-menu bg-[#001D44] p-5 rounded-2xl z-10' ref={dropdownRef}>
+                    <div className='py-2 font-semibold'>
+                        {header.map((link, i) => (
+                            <Link to={link.path} className={location.pathname === link.path ? 'text-[#26FFDA]' : 'text-white'} onClick={() => setOpen(false)} key={i}>{link.title}</Link>
+                        ))}
+                    </div>
+                    <button className='block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => setOpen(false)}>Signup</button>
+                </div>}
             </div>
         </div>
     )

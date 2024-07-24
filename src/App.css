@@ -2,22 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 body {
   background-color: #1e1e1e;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: white;
 }
 
+/* header */
 .signup-button {
   background-image: linear-gradient(99.66deg, #001F46 0%, #00C9D1 139.45%);
 }
 
+.dropdown-menu {
+  position: absolute;
+  top: 60px;
+  right: 10px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 6px;
+  text-align: center;
+}
+
+/* footer */
 .footer {
   background-image: url("../public/images/footer_bg.png");
-  background-size: 100% 100%;
-  height: 100px;
+  background-position: 70% top;
+  background-size: auto 100%;
+}
+
+/* landing */
+.landing-courses {
+  background-image: url('../public/images/landing_courses_bg.png');
+  background-size: cover;
+}
+
+.landing-dobretech-feature:hover {
+  box-shadow: 0 0 20px #DDD;
+  cursor: pointer;
+}
+
+.landing-readmore-button {
+  box-shadow: 0px 8px 40px rgba(0, 122, 132, 0.15);
+}
+
+.landing-activities {
+  box-shadow: 0px 8px 40px rgba(0, 122, 132, 0.15);
 }
