@@ -240,26 +240,74 @@ export default function Landing() {
             <div className="text-center text-4xl font-semibold py-1">
                 What Our <span className="text-tomato">Students</span> Says About
             </div>
-            <div className="flex flex-wrap justify-around py-12">
-                <div className="flex flex-wrap flex-col content-between w-[500px] h-[410px] rounded-3xl p-8 landing-readmore-button">
-                    <div>
-                        <div className="flex gap-6 items-center">
-                            <img src="../images/sample_avatar.png" alt="dummy avatar" className="rounded-full" />
-                            <div>
-                                <div className="text-xl font-bold">Takumbi Agbortoko</div>
-                                <div className="">Technicien Supérieur Systèmes et Réseaux</div>
-                            </div>
-                        </div>
-                        <div className="py-4">
-                            Excellent content and assignments that build on your
-                            knowledge, reinforce, and then expand. I recently secured
-                            new employment and couldn't have done so without the
-                            Professional Network engineer career course.
-                        </div>
-                    </div>
-                    <div className="text-2xl text-[#FFB737] mt-auto">★★★★★</div>
-                </div>
+            {/* <div className="flex flex-wrap justify-around py-12">
+                <ReviewCard />
+            </div> */}
+            <div className="review-carousel hidden lg:block py-10">
+                <Carousel
+                    infiniteLoop={true}
+                    centerMode={true}
+                    centerSlidePercentage={35}
+                    autoPlay={true}
+                    interval={2000}
+                    showStatus={false} showThumbs={false} showArrows={false}
+                >
+                    <ReviewCard />
+                    <ReviewCard />
+                    <ReviewCard />
+                </Carousel>
+            </div>
+            <div className="review-carousel py-10 hidden sm:block lg:hidden">
+                <Carousel
+                    infiniteLoop={true}
+                    centerMode={true}
+                    centerSlidePercentage={60}
+                    autoPlay={true}
+                    interval={2000}
+                    showStatus={false} showThumbs={false} showArrows={false}
+                >
+                    <ReviewCard />
+                    <ReviewCard />
+                    <ReviewCard />
+                </Carousel>
+            </div>
+            <div className="review-carousel py-10 sm:hidden">
+                <Carousel
+                    infiniteLoop={true}
+                    centerMode={true}
+                    centerSlidePercentage={100}
+                    autoPlay={true}
+                    interval={2000}
+                    showStatus={false} showThumbs={false} showArrows={false}
+                >
+                    <ReviewCard />
+                    <ReviewCard />
+                    <ReviewCard />
+                </Carousel>
             </div>
         </div>
     )
 }
+
+const ReviewCard = () => (
+    <div className="sm:px-2 xl:px-12 py-8">
+        <div className="flex flex-wrap flex-col text-left content-between w-[100%] min-h-[410px] rounded-3xl p-8 review-carousel-card">
+            <div>
+                <div className="flex flex-col sm:flex-row gap-6 items-center">
+                    <img src="../images/sample_avatar.png" alt="dummy avatar" className="rounded-full" />
+                    <div>
+                        <div className="sm:text-xl font-bold">Takumbi Agbortoko</div>
+                        <div className="">Technicien Supérieur Systèmes et Réseaux</div>
+                    </div>
+                </div>
+                <div className="py-4">
+                    Excellent content and assignments that build on your
+                    knowledge, reinforce, and then expand. I recently secured
+                    new employment and couldn't have done so without the
+                    Professional Network engineer career course.
+                </div>
+            </div>
+            <div className="text-2xl text-[#FFB737] mt-auto">★★★★★</div>
+        </div>
+    </div>
+)
