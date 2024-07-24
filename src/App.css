@@ -33,6 +33,12 @@ body {
   background-size: auto 100%;
 }
 
+@media screen and (min-width: 1366px) {
+  .footer {
+    background-size: 100% 100%;
+  }
+}
+
 /* landing */
 .landing-courses {
   background-image: url('../public/images/landing_courses_bg.png');

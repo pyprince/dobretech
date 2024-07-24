@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className='max-w-[1400px] mx-auto bg-white'>
+    <div className='bg-white'>
       <Router>
         <Header />
         <Routes>
