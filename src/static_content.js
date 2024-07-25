@@ -192,5 +192,14 @@ export const landing = {
             image: 'it_consulting.png',
             link: '/'
         },
-    ]
+    ],
+    review_card: {
+        name: 'Takumbi Agbortoko',
+        role: 'Technicien Supérieur Systèmes et Réseaux',
+        review_text: `Excellent content and assignments that build on your
+            knowledge, reinforce, and then expand. I recently secured
+            new employment and couldn't have done so without the
+            Professional Network engineer career course.`,
+        score: 5
+    }
 }

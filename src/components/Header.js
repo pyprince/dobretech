@@ -1,9 +1,10 @@
 import React, {useState, useEffect, useRef} from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { header } from '../static_content';
 
 const Header = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const [open, setOpen] = useState(false);
     const dropdownRef = useRef(null);
 
@@ -14,7 +15,8 @@ const Header = () => {
     };
 
     const handleMenuClick = (event) => {
-        setOpen(!open);
+        if(open) setOpen(false);
+        else setOpen(true);
     };
 
     useEffect(() => {
@@ -25,7 +27,7 @@ const Header = () => {
     }, []);
 
     return (
-        <div className='bg-[#001D44] flex px-3 py-1 sm:pl-10 sm:pr-16 sm:py-3 items-center justify-between'>
+        <div className='bg-[#001D44] flex px-3 py-1 sm:pl-10 md:pr-16 sm:py-3 items-center justify-between'>
             <div className='flex items-center'>
                 <Link to='/' className='w-[75px]'>
                     <img src='../images/logox75.png' alt='logo' />
@@ -37,10 +39,13 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex items-center gap-5'>
-                <Link to='/notifications' className='w-[15px]'>
-                    <img src='../images/icons/notification.svg' alt='notification' />
+                {/* <div className='text-sm'>
+                    info@dobretech.com | +237 652632299 | Mon -Sat 8.00 - 18.00
+                </div> */}
+                <Link to='/notifications' className='w-[20px]'>
+                    <img src='../images/icons/notification.svg' alt='notification' className='w-full' />
                 </Link>
-                <button className='hidden sm:block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato'>Signup</button>
+                <button className='hidden sm:block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => navigate('/apply')}>Apply now</button>
                 <button className='sm:hidden button text-white ml-2 w-[25px]' onClick={handleMenuClick}>
                     <img src='../images/icons/menu.svg' className='w-full h-full' alt='menu' />
                 </button>
@@ -50,7 +55,7 @@ const Header = () => {
                             <Link to={link.path} className={location.pathname === link.path ? 'text-[#26FFDA]' : 'text-white'} onClick={() => setOpen(false)} key={i}>{link.title}</Link>
                         ))}
                     </div>
-                    <button className='block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => setOpen(false)}>Signup</button>
+                    <button className='block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => {navigate('/apply'); setOpen(false)}}>Apply now</button>
                 </div>}
             </div>
         </div>

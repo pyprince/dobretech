@@ -1,12 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Carousel } from 'react-responsive-carousel';
-import {landing} from '../static_content'
-import {CarouselSlide1, CarouselSlide2, CarouselSlide3, CarouselSlide4} from '../components/CarouselSlides';
 import CerificationCourse from '../components/CerificationCourse';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+import {CarouselSlide1, CarouselSlide2, CarouselSlide3, CarouselSlide4} from '../components/CarouselSlides';
+import ReviewCard from "../components/ReviewCard";
+import {landing} from '../static_content' // dummy sample data to feed
+
 export default function Landing() {
+    const navigate = useNavigate();
     return (
         <div className="text-primary min-h-[600px]">
             {/* Carousel */}
@@ -17,7 +20,7 @@ export default function Landing() {
                     <CarouselSlide3 />
                     <CarouselSlide4 />
                 </Carousel>
-                <img src="../images/icons/chat.svg" className="absolute bottom-[5%] right-[3%] w-[30px] sm:w-auto" alt="chat icon" />
+                <img src="../images/icons/chat.svg" className="absolute bottom-[5%] right-[3%] w-[30px] sm:w-auto cursor-pointer" alt="chat icon" />
             </div>
             {/* Course List */}
             <div className="landing-courses">
@@ -26,27 +29,32 @@ export default function Landing() {
                         <div className="py-5">
                             <img src="../images/icons/cloud.svg" className="mx-auto" alt="cloud" />
                         </div>
-                        <div className="text-2xl py-1">Cloud Computing</div>
+                        <div className="text-2xl py-1 cursor-pointer">
+                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>Cloud Computing</span>
+                        </div>
+                        <div className="py-1 text-[18px]">University of Bues Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
-                    <div className="h-[170px]">
-                        <img src="../images/vertical_line.svg" className="w-full h-full" alt="line" />
-                    </div>
+                    <img src="../images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
                     <div className="text-center p-5 sm:w-[33.3%]">
                         <div className="py-5">
                             <img src="../images/icons/whitehat_hacker.svg" className="mx-auto" alt="cloud" />
                         </div>
-                        <div className="text-2xl py-1">Cybersecurity</div>
+                        <div className="text-2xl py-1 cursor-pointer">
+                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>Cybersecurity</span>
+                        </div>
+                        <div className="py-1 text-[18px]">University of Bues Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
-                    <div className="h-[170px]">
-                        <img src="../images/vertical_line.svg" className="w-full h-full" alt="line" />
-                    </div>
+                    <img src="../images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
                     <div className="text-center p-5 sm:w-[33.3%]">
                         <div className="py-5">
                             <img src="../images/icons/ub_program.svg" className="mx-auto" alt="cloud" />
                         </div>
-                        <div className="text-2xl py-1">UB Program</div>
+                        <div className="text-2xl py-1">
+                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>UB Program</span>
+                        </div>
+                        <div className="py-1 text-[18px]">University of Bues Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
                 </div>
@@ -240,9 +248,6 @@ export default function Landing() {
             <div className="text-center text-4xl font-semibold py-1">
                 What Our <span className="text-tomato">Students</span> Says About
             </div>
-            {/* <div className="flex flex-wrap justify-around py-12">
-                <ReviewCard />
-            </div> */}
             <div className="review-carousel hidden lg:block py-10">
                 <Carousel
                     infiniteLoop={true}
@@ -252,9 +257,9 @@ export default function Landing() {
                     interval={2000}
                     showStatus={false} showThumbs={false} showArrows={false}
                 >
-                    <ReviewCard />
-                    <ReviewCard />
-                    <ReviewCard />
+                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
+                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
+                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
                 </Carousel>
             </div>
             <div className="review-carousel py-10 hidden sm:block lg:hidden">
@@ -289,25 +294,3 @@ export default function Landing() {
     )
 }
 
-const ReviewCard = () => (
-    <div className="sm:px-2 xl:px-12 py-8">
-        <div className="flex flex-wrap flex-col text-left content-between w-[100%] min-h-[410px] rounded-3xl p-8 review-carousel-card">
-            <div>
-                <div className="flex flex-col sm:flex-row gap-6 items-center">
-                    <img src="../images/sample_avatar.png" alt="dummy avatar" className="rounded-full" />
-                    <div>
-                        <div className="sm:text-xl font-bold">Takumbi Agbortoko</div>
-                        <div className="">Technicien Supérieur Systèmes et Réseaux</div>
-                    </div>
-                </div>
-                <div className="py-4">
-                    Excellent content and assignments that build on your
-                    knowledge, reinforce, and then expand. I recently secured
-                    new employment and couldn't have done so without the
-                    Professional Network engineer career course.
-                </div>
-            </div>
-            <div className="text-2xl text-[#FFB737] mt-auto">★★★★★</div>
-        </div>
-    </div>
-)
