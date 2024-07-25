@@ -32,7 +32,7 @@ export default function Landing() {
                         <div className="text-2xl py-1 cursor-pointer">
                             <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>Cloud Computing</span>
                         </div>
-                        <div className="py-1 text-[18px]">University of Bues Intensive Hands-on IT Career Training</div>
+                        <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
                     <img src="../images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
@@ -43,7 +43,7 @@ export default function Landing() {
                         <div className="text-2xl py-1 cursor-pointer">
                             <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>Cybersecurity</span>
                         </div>
-                        <div className="py-1 text-[18px]">University of Bues Intensive Hands-on IT Career Training</div>
+                        <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
                     <img src="../images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
@@ -54,7 +54,7 @@ export default function Landing() {
                         <div className="text-2xl py-1">
                             <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>UB Program</span>
                         </div>
-                        <div className="py-1 text-[18px]">University of Bues Intensive Hands-on IT Career Training</div>
+                        <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
                 </div>

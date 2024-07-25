@@ -40,6 +40,23 @@ body {
 }
 
 /* landing */
+.carousel .control-dots .dot {
+  width: 12px; /* Set the width of the rectangle */
+  height: 3px; /* Set the height of the rectangle */
+  border-radius: 3px; /* Optional: to slightly round the corners */
+  background-color: #ccc; /* Default color */
+  margin: 0 5px; /* Space between dots */
+}
+
+.carousel .control-dots .dot.selected {
+  width: 40px;
+  background-color: #00FFF0;
+}
+
+.carousel .control-dots .dot:hover {
+  height: 4px;
+}
+
 .landing-courses {
   background-image: url('../public/images/landing_courses_bg.png');
   background-size: cover;
@@ -64,4 +81,13 @@ body {
 
 .review-carousel-card {
   box-shadow: 0px 15px 60px rgba(11, 112, 119, 0.1);
+}
+
+.review-carousel .carousel .control-dots .dot.selected {
+  background-color: black;
+}
+
+/* apply now page */
+.apply-form input {
+  box-shadow: 0px 17px 30px -10px rgba(0, 122, 132, 0.15);
 }

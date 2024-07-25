@@ -1,3 +1,5 @@
+// static content to feed ui, could be fetched from backend
+
 export const header = [
     {
         title: 'Home',
@@ -200,6 +202,12 @@ export const landing = {
             knowledge, reinforce, and then expand. I recently secured
             new employment and couldn't have done so without the
             Professional Network engineer career course.`,
-        score: 5
+        score: 5 // assumed as an integer, should figure out if it's float
     }
+}
+
+export const apply = {
+    program_type: ['Cloud Computing', 'Cybersecurity', 'UB program'],
+    star_month: ['October 2024', 'November 2024'],
+    payment_type: ['Payment1', 'Payment2'] // it could be static - select your prefer option
 }

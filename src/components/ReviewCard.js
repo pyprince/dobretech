@@ -17,10 +17,10 @@ const ReviewCard = ({name, role, review_text, score}) => (
             </div>
             <div className="text-2xl mt-auto">
                 {
-                    Array(score).fill(<span className="text-[#FFB737]">★</span>)
+                    Array(score).fill(1).map((value, i) => <span className="text-[#FFB737]" key={i}>★</span>)
                 }
                 {
-                    score < 5 && Array(5 - score).fill(<span>★</span>)
+                    score < 5 && Array(5 - score).fill(1).map((value, i) => <span key={i}>★</span>)
                 }
             </div>
         </div>
