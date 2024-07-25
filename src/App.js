@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Landing from './pages/Landing';
+import Apply from './pages/Apply';
 // Dummy component for missing routes
 import Dummy from './pages/Dummy';
 
@@ -20,7 +21,7 @@ function App() {
           <Route exact path='/community' element={<Dummy />} />
           <Route exact path='/notifications' element={<Dummy />} />
           <Route exact path='/training' element={<Dummy />} />
-          <Route exact path='/apply' element={<Dummy />} />
+          <Route exact path='/apply' element={<Apply />} />
           <Route exact path='/news' element={<Dummy />} />
           <Route exact path='/faqs' element={<Dummy />} />
           <Route exact path='/intro' element={<Dummy />} />
