@@ -9,12 +9,14 @@ import Dummy from './pages/Dummy';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import './App.css';
 
 function App() {
   return (
     <div className='bg-white'>
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes>
           <Route exact path='/' element={<Landing />} />
