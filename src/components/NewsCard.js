@@ -2,8 +2,8 @@ import React from "react";
 
 const NewsCard = ({image, title, date, number}) => {
     return (
-        <div className="w-[385px] rounded-3xl landing-readmore-button my-5">
-            <div className="w-[385px] h-[350px]">
+        <div className="w-[360px] rounded-3xl landing-readmore-button my-5">
+            <div className="w-[360px] h-[350px]">
                 <img src={`../images/${image}`} alt="news" className="rounded-t-3xl w-full h-full" />
             </div>
             <div className="px-10 py-6 h-[250px] flex flex-col content-between">

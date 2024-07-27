@@ -12,7 +12,7 @@ const News = () => {
                     <img src="../images/icons/curved_line.svg" alt="saucy curve" className="absolute bottom-[-5px] right-[-50px]" />
                 </div>
             </div>
-            <div className="flex flex-wrap justify-center gap-16 mb-20">
+            <div className="flex flex-wrap justify-center gap-6 lg:gap-12 mb-20 max-w-[1200px] mx-auto">
                 {landing.news.map((item, i) => (
                     <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
                 ))}
