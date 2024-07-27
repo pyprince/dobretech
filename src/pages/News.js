@@ -14,13 +14,13 @@ const News = () => {
             </div>
             <div className="flex flex-wrap justify-center gap-6 lg:gap-12 mb-20 max-w-[1200px] mx-auto">
                 {landing.news.map((item, i) => (
-                    <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
+                    <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} link={item.link} key={i} />
                 ))}
                 {landing.news.map((item, i) => (
-                    <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
+                    <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} link={item.link} key={i} />
                 ))}
                 {landing.news.map((item, i) => (
-                    <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
+                    <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} link={item.link} key={i} />
                 ))}
             </div>
         </div>

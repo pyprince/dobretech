@@ -209,19 +209,22 @@ export const landing = {
             image: 'migrate_wordpress.jfif',
             title: 'Step By Step Guide To Migrate WordPress Website',
             date: ' June 12, 2024',
-            number: 251
+            number: 251,
+            link: '/'
         },
         {
             image: 'penetration_test.png',
             title: 'AWS, Google, and Azure Command-Line Tools Could Leak Credentials in Build Logs',
             date: ' April 15, 2024',
-            number: 251
+            number: 251,
+            link: '/'
         },
         {
             image: 'education.png',
             title: 'DobreTech Institution and University of Buea: Empowering Innovation and Education',
             date: ' March 17, 2024',
-            number: 251
+            number: 251,
+            link: '/'
         },
     ]
 }
