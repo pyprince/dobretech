@@ -203,11 +203,77 @@ export const landing = {
             new employment and couldn't have done so without the
             Professional Network engineer career course.`,
         score: 5 // assumed as an integer, should figure out if it's float
-    }
+    },
+    news: [
+        {
+            image: 'migrate_wordpress.jfif',
+            title: 'Step By Step Guide To Migrate WordPress Website',
+            date: ' June 12, 2024',
+            number: 251
+        },
+        {
+            image: 'penetration_test.png',
+            title: 'AWS, Google, and Azure Command-Line Tools Could Leak Credentials in Build Logs',
+            date: ' April 15, 2024',
+            number: 251
+        },
+        {
+            image: 'education.png',
+            title: 'DobreTech Institution and University of Buea: Empowering Innovation and Education',
+            date: ' March 17, 2024',
+            number: 251
+        },
+    ]
 }
 
 export const apply = {
     program_type: ['Cloud Computing', 'Cybersecurity', 'UB program'],
     star_month: ['October 2024', 'November 2024'],
     payment_type: ['Payment1', 'Payment2'] // it could be static - select your prefer option
+}
+
+export const aboutus = {
+    info: [
+        {
+            title: 'Our Story',
+            icon: 'aboutus_story',
+            text: 'Coming from a third world country we learn to adapt and improvised and always seek for skills which lead us to study extremely hard and through though situations'
+        },
+        {
+            title: 'Our Mission',
+            icon: 'aboutus_mission',
+            text: 'Our mission is to provide affordable professional cutting-Edge and on-demand training. Ensuring that participants are job ready, while also addressing the global IT skills-shortage.'
+        },
+        {
+            title: 'Our Vision',
+            icon: 'aboutus_vision',
+            text: 'Our vision is to build a highly competitive and effective training provider that will become the number one choice for both individuals and corporate organizations in Cameroon, Africa and to the Globe.'
+        },
+    ],
+    e_learning: [
+        {
+            icon: 'professional',
+            text: 'We\'re Experienced Professionals'
+        },
+        {
+            icon: 'homework',
+            text: 'We\'ve Done Our Homework'
+        },
+        {
+            icon: 'cost',
+            text: 'We\'re Flexible, Agile and Cost-effective'
+        },
+        {
+            icon: 'client',
+            text: 'Our Clients Get Results'
+        },
+        {
+            icon: 'quality',
+            text: 'We are Committed to Quality'
+        },
+        {
+            icon: 'deliver',
+            text: 'We do more than just deliver'
+        },
+    ]
 }

@@ -91,3 +91,10 @@ body {
 .apply-form input {
   box-shadow: 0px 17px 30px -10px rgba(0, 122, 132, 0.15);
 }
+
+/* about us page */
+.dobre-signify {
+  background-image: url(../public/images/about_us_gradient_bg.png);
+  background-size: 100% 100%;
+}
+

@@ -7,11 +7,11 @@ const ReviewCard = ({name, role, review_text, score}) => (
                 <div className="flex flex-col sm:flex-row gap-6 items-center">
                     <img src="../images/sample_avatar.png" alt="dummy avatar" className="rounded-full" />
                     <div>
-                        <div className="sm:text-xl font-bold">{name}</div>
-                        <div className="">{role}</div>
+                        <div className="sm:text-xl text-black font-bold">{name}</div>
+                        <div className="text-secondary">{role}</div>
                     </div>
                 </div>
-                <div className="py-4">
+                <div className="text-secondary py-4">
                     {review_text}
                 </div>
             </div>

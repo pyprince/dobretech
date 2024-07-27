@@ -5,8 +5,9 @@ import CerificationCourse from '../components/CerificationCourse';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import {CarouselSlide1, CarouselSlide2, CarouselSlide3, CarouselSlide4} from '../components/CarouselSlides';
-import ReviewCard from "../components/ReviewCard";
 import {landing} from '../static_content' // dummy sample data to feed
+import ReviewCarousel from "../components/ReviewCarousel";
+import NewsCard from "../components/NewsCard";
 
 export default function Landing() {
     const navigate = useNavigate();
@@ -179,66 +180,15 @@ export default function Landing() {
                 </div>
             </div>
             {/* latest news */}
-            <div className="text-4xl text-center font-semibold">Latest News</div>
-            <div className="py-2 w-[60%] mx-auto text-center text-black font-thin">
+            <div className="text-4xl text-center font-semibold mt-12">Latest News</div>
+            <div className="py-2 max-w-[800px] mx-auto text-center text-secondary">
                 With the help of teachers and the environment as the third teacher, studentshave
                 opportunities to confidently take risks.
             </div>
             <div className="flex flex-wrap mt-16 px-12 gap-16 justify-center">
-                <div className="w-[385px] rounded-3xl landing-readmore-button my-5">
-                    <div className="w-[385px] h-[350px]">
-                        <img src="../images/migrate_wordpress.jfif" alt="cloud" className="rounded-t-3xl w-full h-full" />
-                    </div>
-                    <div className="px-10 py-6 h-[250px] flex flex-col content-between">
-                        <h4 className="text-secondary text-xl">Step By Step Guide To Migrate WordPress Website</h4>
-                        <div className="flex gap-3 mt-auto">
-                            <div className="flex gap-2">
-                                <img src="../images/icons/calender.svg" alt="calender" className="" />
-                                <div className="text-tomato">June 12, 2024</div>
-                            </div>
-                            <div className="flex gap-2">
-                                <img src="../images/icons/message.svg" alt="message" className="" />
-                                <div className="text-primary">251</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="w-[385px] rounded-3xl landing-readmore-button my-5">
-                    <div className="w-[385px] h-[350px]">
-                        <img src="../images/penetration_test.png" alt="cloud" className="rounded-t-3xl w-full h-full" />
-                    </div>
-                    <div className="px-10 py-6 h-[250px] flex flex-col content-between">
-                        <h4 className="text-secondary text-xl">Step By Step Guide To Migrate WordPress Website</h4>
-                        <div className="flex gap-3 mt-auto">
-                            <div className="flex gap-2">
-                                <img src="../images/icons/calender.svg" alt="calender" className="" />
-                                <div className="text-tomato">June 12, 2024</div>
-                            </div>
-                            <div className="flex gap-2">
-                                <img src="../images/icons/message.svg" alt="message" className="" />
-                                <div className="text-primary">251</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="w-[385px] rounded-3xl landing-readmore-button my-5">
-                    <div className="w-[385px] h-[350px]">
-                        <img src="../images/education.png" alt="cloud" className="rounded-t-3xl w-full h-full" />
-                    </div>
-                    <div className="px-10 py-6 h-[250px] flex flex-col content-between">
-                        <h4 className="text-secondary text-xl">Step By Step Guide To Migrate WordPress Website</h4>
-                        <div className="flex gap-3 mt-auto">
-                            <div className="flex gap-2">
-                                <img src="../images/icons/calender.svg" alt="calender" className="" />
-                                <div className="text-tomato">June 12, 2024</div>
-                            </div>
-                            <div className="flex gap-2">
-                                <img src="../images/icons/message.svg" alt="message" className="" />
-                                <div className="text-primary">251</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {landing.news.map((item, i) => (
+                    <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
+                ))}
             </div>
             {/* video */}
             <div className="flex justify-center px-10 py-12 mt-20">
@@ -248,48 +198,7 @@ export default function Landing() {
             <div className="text-center text-4xl font-semibold py-1">
                 What Our <span className="text-tomato">Students</span> Says About
             </div>
-            <div className="review-carousel hidden lg:block py-10">
-                <Carousel
-                    infiniteLoop={true}
-                    centerMode={true}
-                    centerSlidePercentage={35}
-                    autoPlay={true}
-                    interval={2000}
-                    showStatus={false} showThumbs={false} showArrows={false}
-                >
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                </Carousel>
-            </div>
-            <div className="review-carousel py-10 hidden sm:block lg:hidden">
-                <Carousel
-                    infiniteLoop={true}
-                    centerMode={true}
-                    centerSlidePercentage={60}
-                    autoPlay={true}
-                    interval={2000}
-                    showStatus={false} showThumbs={false} showArrows={false}
-                >
-                    <ReviewCard />
-                    <ReviewCard />
-                    <ReviewCard />
-                </Carousel>
-            </div>
-            <div className="review-carousel py-10 sm:hidden">
-                <Carousel
-                    infiniteLoop={true}
-                    centerMode={true}
-                    centerSlidePercentage={100}
-                    autoPlay={true}
-                    interval={2000}
-                    showStatus={false} showThumbs={false} showArrows={false}
-                >
-                    <ReviewCard />
-                    <ReviewCard />
-                    <ReviewCard />
-                </Carousel>
-            </div>
+            <ReviewCarousel />
         </div>
     )
 }
