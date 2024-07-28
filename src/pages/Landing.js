@@ -116,9 +116,11 @@ export default function Landing() {
                 </div>
             </div>
             {/* cerification courses */}
-            <div className="text-center text-3xl sm:text-4xl font-semibold sm:mt-16 py-8">
-                Cerification Courses
-                <img src="../images/icons/curved_line.svg" alt="saucy curved line" className="w-[30%] ml-[60%] sm:w-auto" />
+            <div className="flex justify-center text-3xl sm:text-4xl font-semibold sm:mt-16 py-8">
+                <div className="">
+                    Cerification Courses
+                    <img src="../images/icons/curved_line.svg" alt="saucy curved line" className="w-[60%] ml-[40%] sm:ml-[60%] sm:w-auto" />
+                </div>
             </div>
             {landing.cerification_courses.map((course, i) => {
                 if(i === 1) 
@@ -180,7 +182,12 @@ export default function Landing() {
                 </div>
             </div>
             {/* latest news */}
-            <div className="text-4xl text-center font-semibold mt-12">Latest News</div>
+            <div className="flex justify-center text-4xl font-semibold mt-12">
+                <div>
+                    <img src="../images/icons/curved_line_reversed.svg" alt="saucy curve" className="ml-[-40%] sm:ml-[-50%] mb-1" />
+                    Latest News
+                </div>
+            </div>
             <div className="py-2 max-w-[800px] mx-auto text-center text-secondary">
                 With the help of teachers and the environment as the third teacher, studentshave
                 opportunities to confidently take risks.
@@ -195,8 +202,11 @@ export default function Landing() {
                 <img src="../images/video.png" alt="video" />
             </div>
             {/* review */}
-            <div className="text-center text-4xl font-semibold py-1">
-                What Our <span className="text-tomato">Students</span> Says About
+            <div className="flex justify-center text-4xl font-semibold py-1">
+                <div className="text-center relative">
+                    What Our <span className="text-tomato">Students</span> Says About
+                    <img src="../images/icons/curved_line.svg" alt="saucy curved" className="absolute right-0" />
+                </div>
             </div>
             <ReviewCarousel />
         </div>

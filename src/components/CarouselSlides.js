@@ -48,7 +48,7 @@ const CarouselSlide2 = () => {
                     <div className="py-1">{landing.carousel.content2[1]}</div>
                     <div className="py-1">{landing.carousel.content2[1]}</div>
                 </div>
-                <Link to='/aboutus' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[6%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md">Consulting Services</Link>
+                <Link to='/services' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[6%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md">Consulting Services</Link>
             </div>
             <div className="absolute top-0 right-[5%] w-[60%]">
                 <img src="../images/landing_carousel_2.png" alt="carousel 2" className="" />

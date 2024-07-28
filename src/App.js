@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Landing from './pages/Landing';
-import Apply from './pages/Apply';
+import Services from './pages/Services';
 import AboutUs from './pages/AboutUs';
+import Apply from './pages/Apply';
 import News from './pages/News';
 // Dummy component for missing routes
 import Dummy from './pages/Dummy';
@@ -20,7 +21,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path='/' element={<Landing />} />
-          <Route exact path='/services' element={<Dummy />} />
+          <Route exact path='/services' element={<Services />} />
           <Route exact path='/aboutus' element={<AboutUs />} />
           <Route exact path='/community' element={<Dummy />} />
           <Route exact path='/notifications' element={<Dummy />} />
