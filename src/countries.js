@@ -1,4 +1,4 @@
-const contries = [
+const countries = [
   {name: 'Afghanistan', code: 'AF'}, 
   {name: 'Åland Islands', code: 'AX'}, 
   {name: 'Albania', code: 'AL'}, 
@@ -244,4 +244,4 @@ const contries = [
   {name: 'Zimbabwe', code: 'ZW'} 
 ];
 
-export default contries;
+export default countries;
