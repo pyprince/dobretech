@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NewsCard = ({image, title, date, number, link}) => {
+const NewsCard = ({id, image, title, date, number}) => {
     return (
         <div className="w-[360px] rounded-3xl landing-readmore-button my-5">
             <div className="w-[360px] h-[350px]">
@@ -20,7 +20,7 @@ const NewsCard = ({image, title, date, number, link}) => {
                             <div className="text-primary">{number}</div>
                         </div>
                     </div>
-                    <Link to={link} className="bg-primary text-white px-4 py-1 rounded-md">Read More</Link>
+                    <Link to={`/news/${id}`} className="bg-primary text-white px-4 py-1 rounded-md">Read More</Link>
                 </div>
             </div>
         </div>

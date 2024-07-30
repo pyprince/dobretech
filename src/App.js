@@ -5,6 +5,9 @@ import Services from './pages/Services';
 import AboutUs from './pages/AboutUs';
 import Apply from './pages/Apply';
 import News from './pages/News';
+import NewsDetail from './pages/NewsDetail';
+import Community from './pages/Community';
+
 // Dummy component for missing routes
 import Dummy from './pages/Dummy';
 
@@ -23,11 +26,11 @@ function App() {
           <Route exact path='/' element={<Landing />} />
           <Route exact path='/services' element={<Services />} />
           <Route exact path='/aboutus' element={<AboutUs />} />
-          <Route exact path='/community' element={<Dummy />} />
-          <Route exact path='/notifications' element={<Dummy />} />
-          <Route exact path='/training' element={<Dummy />} />
           <Route exact path='/apply' element={<Apply />} />
           <Route exact path='/news' element={<News />} />
+          <Route path='/news/:id' element={<NewsDetail />} />
+          <Route exact path='/community' element={<Community />} />
+          <Route exact path='/training' element={<Dummy />} />
           <Route exact path='/faqs' element={<Dummy />} />
           <Route exact path='/intro' element={<Dummy />} />
           <Route exact path='/privacypolicy' element={<Dummy />} />

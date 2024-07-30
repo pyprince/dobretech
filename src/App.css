@@ -102,3 +102,10 @@ body {
 .services-info-card {
   box-shadow: 0px 37px 80px -20px rgba(0, 122, 132, 0.1);
 }
+
+/* news detail */
+
+.news-detail-card {
+  box-shadow: 0px 37px 124.5px -20px rgba(0, 122, 132, 0.15);
+  border-radius: 24px;
+}

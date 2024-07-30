@@ -73,7 +73,7 @@ const CarouselSlide3 = () => {
                     <div className="">{landing.carousel.content3[4]}</div>
                 </div>
                 <div className="text-right pr-12">
-                    <Link to='/aboutus' className="hidden sm:inline-block bg-tomato text-white text-[12px] md:text-base mt-[-3%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-auto">Explore Our Courses</Link>
+                    <Link to='/news' className="hidden sm:inline-block bg-tomato text-white text-[12px] md:text-base mt-[-3%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-auto">Explore Our Courses</Link>
                 </div>
             </div>
         </div>
@@ -89,8 +89,8 @@ const CarouselSlide4 = () => {
                     <div className="py-1">{landing.carousel.content4[1]}</div>
                 </div>
                 <div className="mt-[10%] sm:mt-0">
-                    <Link to='/aboutus' className="inline-block bg-primary text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md">Career Path Coureses</Link>
-                    <Link to='/aboutus' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-2">Certification Coureses</Link>
+                    <Link to='/news' className="inline-block bg-primary text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md">Career Path Coureses</Link>
+                    <Link to='/news' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-2">Certification Coureses</Link>
                 </div>
             </div>
             <div className="absolute top-0 right-[5%] w-[60%]">

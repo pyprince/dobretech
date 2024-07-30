@@ -194,7 +194,7 @@ export default function Landing() {
             </div>
             <div className="flex flex-wrap mt-16 px-12 gap-16 justify-center">
                 {landing.news.map((item, i) => (
-                    <NewsCard image={item.image} title={item.title} date={item.date} number={item.number} link={item.link} key={i} />
+                    <NewsCard id={i+1} image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
                 ))}
             </div>
             {/* video */}

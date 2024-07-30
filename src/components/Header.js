@@ -42,7 +42,7 @@ const Header = () => {
                 {/* <div className='text-sm'>
                     info@dobretech.com | +237 652632299 | Mon -Sat 8.00 - 18.00
                 </div> */}
-                <Link to='/notifications' className='w-[20px]'>
+                <Link to='/news' className='w-[20px]'>
                     <img src='../images/icons/notification.svg' alt='notification' className='w-full' />
                 </Link>
                 <button className='hidden sm:block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => navigate('/apply')}>Apply now</button>

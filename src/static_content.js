@@ -53,10 +53,10 @@ export const footer = {
         },
     ],
     important_links: [
-        {
-            title: 'Training',
-            path: '/training'
-        },
+        // {
+        //     title: 'Training',
+        //     path: '/training'
+        // },
         {
             title: 'Services',
             path: '/services'
@@ -73,14 +73,14 @@ export const footer = {
             title: 'Apply Now',
             path: '/apply'
         },
-        {
-            title: 'Intro to IT',
-            path: '/intro'
-        },
-        {
-            title: 'FAQs',
-            path: '/faqs'
-        },
+        // {
+        //     title: 'Intro to IT',
+        //     path: '/intro'
+        // },
+        // {
+        //     title: 'FAQs',
+        //     path: '/faqs'
+        // },
     ],
     information: {
         address: 'PO Box 63, University of Buea - IT center, Buea, South West Region - Cameroon',
@@ -199,28 +199,28 @@ export const landing = {
         {
             name: 'Michelle Kenyi',
             role: 'Student',
-            image: 'review_michelle',
+            image: 'review_michelle.jpg',
             review_text: `Overall, it is an excellent program I will recommend to any one because it’s made for anyone. Even someone without an IT background and the labs are easy to use also since they come with step-by-step instructions.`,
             score: 5 // assumed as an integer, should figure out if it's float
         },
         {
             name: 'Kogge Lovert',
             role: 'Student',
-            image: 'review_kogge',
+            image: 'review_kogge.jpg',
             review_text: `Generally, I think this is the best educational training program that I have experienced real world practical. It’s just so amazing how the courses are outlined with each course having a connection to the other. And the labs are just super awesome.`,
             score: 5 // assumed as an integer, should figure out if it's float
         },
         {
             name: 'Andy Tante',
             role: 'Student',
-            image: 'review_andy',
+            image: 'review_andy.jpg',
             review_text: `I dream of becoming a cloud engineer, this program has been very helpful, not only not only to me but to my peers as well, as we have had depper understanding irrespective of our discipline what would be expected of us in the real world. I love the fact that all our instructors have been in the industry for over a decade, so not only are we getting insights about work ethics, we’re also gaining experience with hands on projects. `,
             score: 5 // assumed as an integer, should figure out if it's float
         },
         {
             name: 'Nicolas Mambo',
             role: 'Student',
-            image: 'review_nicolas',
+            image: 'review_nicolas.jpg',
             review_text: `The cybersecurity and cloud computing program at DobreTech is designed with a strong focus on industry-relevant skills and the curriculum is structured to cover the latest trends, technologies, and best practices incorporating a balance of theoretical lessons and hands-on practical lesson experience.`,
             score: 5 // assumed as an integer, should figure out if it's float
         },
@@ -232,21 +232,18 @@ export const landing = {
             title: 'Step By Step Guide To Migrate WordPress Website',
             date: ' June 12, 2024',
             number: 251,
-            link: '/'
         },
         {
             image: 'penetration_test.png',
             title: 'AWS, Google, and Azure Command-Line Tools Could Leak Credentials in Build Logs',
             date: ' April 15, 2024',
             number: 251,
-            link: '/'
         },
         {
             image: 'education.png',
             title: 'DobreTech Institution and University of Buea: Empowering Innovation and Education',
             date: ' March 17, 2024',
             number: 251,
-            link: '/'
         },
     ]
 }

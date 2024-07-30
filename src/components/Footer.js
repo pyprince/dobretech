@@ -19,7 +19,7 @@ const Footer = () => {
                     }
                 </div>
             </div>
-            <div className='flex flex-col lg:flex-row'>
+            <div className='flex flex-col lg:flex-row mb-5'>
                 <div className='order-2 flex justify-center items-center gap-5 w-auto lg:w-[335px] mx-auto lg:order-1 lg:block p-5 text-justify'>
                     <div className='w-[100px]'>
                         <img src='../images/footer_logo.png' alt='Footer Logo' />
@@ -32,10 +32,12 @@ const Footer = () => {
                     <div className='mx-auto'>
                         <h3 className='text-2xl font-semibold py-5'>Important links</h3>
                         <div>
-                            {footer.important_links.map((link, i) => 
-                                <Link to={link.path} className='block py-2 hover:text-tomato' key={i}>
-                                    {link.title}
-                                </Link>
+                            {footer.important_links.map((link, i) =>
+                                <div className='text-center sm:text-left'>
+                                    <Link to={link.path} className='block py-2 hover:text-tomato' key={i}>
+                                        {link.title}
+                                    </Link>
+                                </div>
                             )}
                         </div>
                         <div className='gap-2 py-5 hidden sm:flex'>
@@ -93,7 +95,6 @@ const Footer = () => {
                     <Link to='termsandconditions' className='text-white hover:text-tomato'>Terms & Conditions</Link>
                 </div>
             </div>
-
         </footer>
     );
 }
