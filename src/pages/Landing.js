@@ -10,6 +10,7 @@ import ReviewCarousel from "../components/ReviewCarousel";
 import NewsCard from "../components/NewsCard";
 
 export default function Landing() {
+
     const navigate = useNavigate();
     return (
         <div className="text-primary min-h-[600px]">
@@ -21,7 +22,7 @@ export default function Landing() {
                     <CarouselSlide3 />
                     <CarouselSlide4 />
                 </Carousel>
-                <img src="../images/icons/chat.svg" className="absolute bottom-[5%] right-[3%] w-[30px] sm:w-auto cursor-pointer" alt="chat icon" />
+                {/* <img src="../images/icons/chat.svg" onClick={openModal} className="absolute bottom-[5%] right-[3%] w-[30px] sm:w-auto cursor-pointer" alt="chat icon" /> */}
             </div>
             {/* Course List */}
             <div className="landing-courses">
@@ -82,37 +83,39 @@ export default function Landing() {
                 }
             </div>
             {/* upcoming events */}
-            <div className="sm:px-8 lg:px-20 mt-16">
-                <div className="relative bg-[#DF1C25] pl-4 pr-0 sm:px-16 pt-12 lg:pb-8 text-white sm:rounded-2xl">
-                    <p className="text-xl py-1">{landing.upcoming_events.prefix}</p>
-                    <h2 className="text-3xl sm:text-5xl font-semibold py-2 sm:w-[500px] relative z-10">{landing.upcoming_events.title}</h2>
-                    <div className="relative z-10">
-                        {
-                            landing.upcoming_events.events.map((event, i) => (
-                                <div className="py-2" key={i}>
-                                    <div className="flex items-center gap-2 py-2">
-                                        <img src="../images/icons/star.svg" alt="title of event" />
-                                        <p className="">{event.title}</p>
-                                    </div>
-                                    <div className="text-xs font-thin flex items-center gap-5">
-                                        <div className="flex items-center gap-2">
-                                            <img src="../images/icons/clock.svg" alt="time" className="w-3" />
-                                            <div>{event.time}</div>
+            <div className="max-w-[1600px] mx-auto">
+                <div className="sm:px-8 lg:px-20 mt-16">
+                    <div className="relative bg-[#DF1C25] pl-4 pr-0 sm:px-16 pt-12 lg:pb-8 text-white sm:rounded-2xl">
+                        <p className="text-xl py-1">{landing.upcoming_events.prefix}</p>
+                        <h2 className="text-3xl sm:text-5xl font-semibold py-2 sm:w-[500px] relative z-10">{landing.upcoming_events.title}</h2>
+                        <div className="relative z-10">
+                            {
+                                landing.upcoming_events.events.map((event, i) => (
+                                    <div className="py-2" key={i}>
+                                        <div className="flex items-center gap-2 py-2">
+                                            <img src="../images/icons/star.svg" alt="title of event" />
+                                            <p className="">{event.title}</p>
                                         </div>
-                                        <div className="flex items-center gap-2">
-                                            <img src="../images/icons/position.svg" alt="type" className="w-3" />
-                                            <div>{event.type}</div>
+                                        <div className="text-xs font-thin flex items-center gap-5">
+                                            <div className="flex items-center gap-2">
+                                                <img src="../images/icons/clock.svg" alt="time" className="w-3" />
+                                                <div>{event.time}</div>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <img src="../images/icons/position.svg" alt="type" className="w-3" />
+                                                <div>{event.type}</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))
-                        }
+                                ))
+                            }
+                        </div>
+                        <div className="mt-10 relative z-10">
+                            <Link to='/community' className="bg-white sm:text-xl text-primary rounded-md px-4 sm:px-6 py-3 hover:bg-primary hover:text-white">View full Events</Link>
+                        </div>
+                        <img src="../images/upcoming_events_vector.png" alt="vector" className="absolute left-0 bottom-0" />
+                        <img src="../images/upcoming_events_character.png" alt="Event woman" className="static block ml-auto mt-[-80px] lg:absolute bottom-0 right-[-50px] z-0" />
                     </div>
-                    <div className="mt-10 relative z-10">
-                        <Link to='/' className="bg-white sm:text-xl text-primary rounded-md px-4 sm:px-6 py-3 hover:bg-primary hover:text-white">View full Events</Link>
-                    </div>
-                    <img src="../images/upcoming_events_vector.png" alt="vector" className="absolute left-0 bottom-0" />
-                    <img src="../images/upcoming_events_character.png" alt="Event woman" className="static block ml-auto mt-[-80px] lg:absolute bottom-0 right-[-50px] z-0" />
                 </div>
             </div>
             {/* cerification courses */}
