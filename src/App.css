@@ -92,20 +92,6 @@ body {
   box-shadow: 0px 17px 30px -10px rgba(0, 122, 132, 0.15);
 }
 
-select {
-  color: gray; /* Change the text color of the select */
-}
-
-/* Style the default option */
-/* select option { */
-  /* color: black; Change the color of regular options */
-/* } */
-
-/* Style the default placeholder option */
-select option[disabled] {
-  color: gray; /* Placeholder color */
-}
-
 /* about us page */
 .dobre-signify {
   background-image: url(../public/images/about_us_gradient_bg.png);

@@ -15,9 +15,8 @@ const ReviewCarousel = () => {
                     interval={2000}
                     showStatus={false} showThumbs={false} showArrows={false}
                 >
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
+                    {/* <CarouselContent /> */}
+                    {landing.review_card.map((review, i) => <ReviewCard name={review.name} role={review.role} image={review.image} review_text={review.review_text} score={review.score} key={i} />)}
                 </Carousel>
             </div>
             <div className="review-carousel py-10 hidden sm:block lg:hidden">
@@ -29,9 +28,7 @@ const ReviewCarousel = () => {
                     interval={2000}
                     showStatus={false} showThumbs={false} showArrows={false}
                 >
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
+                    {landing.review_card.map((review, i) => <ReviewCard name={review.name} role={review.role} image={review.image} review_text={review.review_text} score={review.score} key={i} />)}
                 </Carousel>
             </div>
             <div className="review-carousel py-10 sm:hidden">
@@ -43,9 +40,8 @@ const ReviewCarousel = () => {
                     interval={2000}
                     showStatus={false} showThumbs={false} showArrows={false}
                 >
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
-                    <ReviewCard name={landing.review_card.name} role={landing.review_card.role} review_text={landing.review_card.review_text} score={landing.review_card.score} />
+                    {/* <CarouselContent /> */}
+                    {landing.review_card.map((review, i) => <ReviewCard name={review.name} role={review.role} image={review.image} review_text={review.review_text} score={review.score} key={i} />)}
                 </Carousel>
             </div>
         </>
@@ -53,3 +49,11 @@ const ReviewCarousel = () => {
 }
 
 export default ReviewCarousel;
+
+// const CarouselContent = () => {
+//     return (
+//         <>
+//             {landing.review_card.map((review, i) => <ReviewCard name={review.name} role={review.role} image={review.image} review_text={review.review_text} score={review.score} key={i} />)}
+//         </>
+//     )
+// }

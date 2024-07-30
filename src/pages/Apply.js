@@ -23,59 +23,51 @@ const Apply = () => {
     });
 
     const setFirstName = (isValid) => {
-        validation.firstName = isValid;
-        setValidation({...validation});
+        setValidation(prev => ({ ...prev, firstName: isValid }));
     }
 
     const setLastName = (isValid) => {
-        validation.lastName = isValid;
-        setValidation(validation);
+        setValidation(prev => ({...prev, lastName: isValid}));
     }
 
     const setEmail = (isValid) => {
-        validation.email = isValid;
-        setValidation(validation);
+        setValidation(prev => ({...prev, email: isValid}));
+
     }
 
     const setPhone = (isValid) => {
-        validation.phone = isValid;
-        setValidation(validation);
+        setValidation(prev => ({...prev, phone: isValid}));
+
     }
 
     const setBirth = (isValid) => {
-        validation.birth = isValid;
-        setValidation(validation);
+        setValidation(prev => ({...prev, birth: isValid}));
     }
 
     const setAddress = (isValid) => {
-        validation.address = isValid;
-        setValidation(validation);
+        setValidation(prev => ({...prev, address: isValid}));
+
     }
 
     const setGender = (isValid) => {
-        validation.gender = isValid;
-        setValidation(validation);
+        setValidation(prev => ({...prev, gender: isValid}));
     }
 
     const setCountry = (isValid) => {
-        validation.country = isValid;
-        setValidation(validation);
+        setValidation(prev => ({...prev, country: isValid}));
     }
 
     const setProgram = (isValid) => {
-        validation.program = isValid;
-        setValidation(validation);
+        setValidation(prev => ({...prev, program: isValid}));
     }
 
     const setDate = (isValid) => {
-        validation.date = isValid;
-        setValidation(validation);
-    }
+        setValidation(prev => ({...prev, date: isValid}));
+   }
 
     const setPaymentMethod = (isValid) => {
-        validation.paymentMethod = isValid;
-        setValidation(validation);
-    }
+        setValidation(prev => ({...prev, paymentMethod: isValid}));
+   }
 
     const firstNameRef = useRef();
     const lastNameRef = useRef();
@@ -89,24 +81,35 @@ const Apply = () => {
     const dateRef = useRef();
     const paymentMethodRef = useRef();
 
+    const validateField = (ref, setValidationFunc) => {
+        setValidationFunc(ref.current.value.length > 0);
+    }
+
     const validateInfo = () => {
-        console.log(firstNameRef.current.value.length)
-        if(firstNameRef.current.value.length === 0) setFirstName(false); else setFirstName(true);
-        if(lastNameRef.current.value === 0) setLastName(false);else setLastName(true);
-        if(emailRef.current.value === 0) setEmail(false);else setEmail(true);
-        if(phoneRef.current.value === 0) setPhone(false);else setPhone(true);
-        if(birthRef.current.value === 0) setBirth(false);else setBirth(true);
-        if(addressRef.current.value === 0) setAddress(false);else setAddress(true);
-        if(genderRef.current.value === 0) setGender(false);else setGender(true);
-        if(countryRef.current.value === 0) setCountry(false);else setCountry(true);
-        if(programRef.current.value === 0) setProgram(false);else setProgram(true);
-        if(dateRef.current.value === 0) setDate(false);else setDate(true);
-        if(paymentMethodRef.current.value === 0) setPaymentMethod(false); else setPaymentMethod(true);
+        validateField(firstNameRef, setFirstName);
+        validateField(lastNameRef, setLastName);
+        validateField(emailRef, setEmail);
+        validateField(phoneRef, setPhone);
+        validateField(birthRef, setBirth);
+        validateField(addressRef, setAddress);
+        validateField(genderRef, setGender);
+        validateField(countryRef, setCountry);
+        validateField(programRef, setProgram);
+        validateField(dateRef, setDate);
+        validateField(paymentMethodRef, setPaymentMethod);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         validateInfo();
+        if (Object.values(validation).every(Boolean)) {
+            // Proceed with form submission
+            console.log('Application sent!');
+        }
+        else {
+            // Alert or push notification
+            return;
+        }
     }
 
     return (
@@ -124,7 +127,7 @@ const Apply = () => {
                         <TextInputElement type='text' placeholder='Phone' isValid={validation.phone} elementRef={phoneRef} />
                     </div>
                     <div className="sm:flex flex-wrap items-center justify-center sm:justify-between">
-                        <TextInputElement type='text' placeholder='Date of Birth' isValid={validation.date} elementRef={birthRef} />
+                        <TextInputElement type='text' placeholder='Date of Birth' isValid={validation.birth} elementRef={birthRef} />
                         <TextInputElement type='text' placeholder='Address' isValid={validation.address} elementRef={addressRef} />
                     </div>
                     <div className="sm:flex flex-wrap items-center justify-center sm:justify-between">
