@@ -15,7 +15,7 @@ const Services = () => {
                         <h4 className="text-primary text-xl sm:text-2xl">Why Choose Us</h4>
                         <h2 className="text-primary text-3xl sm:text-4xl">Find More About Our</h2>
                         <h4 className="text-tomato text-2xl sm:text-3xl">Services</h4>
-                        <img src="../images/icons/curved_line_reversed.svg" alt="saucy line" className="absolute top-0 right-0" />
+                        {/* <img src="../images/icons/curved_line_reversed.svg" alt="saucy line" className="absolute top-0 right-0" /> */}
                     </div>
                 </div>
                 <div className="services-info-card flex flex-col sm:flex-row justify-center sm:justify-between items-center text-center sm:text-left p-10  gap-10 xl:gap-20 rounded-3xl">
@@ -45,7 +45,7 @@ const Services = () => {
             <h2 className="flex justify-center text-3xl sm:text-5xl text-tomato text-center font-semibold py-10">
                 <div className="relative">
                     Consulting Services
-                    <img src="../images/icons/curved_green.svg" alt="curved" className="absolute right-[-30px] sm:right-[-80px]" />
+                    {/* <img src="../images/icons/curved_green.svg" alt="curved" className="absolute right-[-30px] sm:right-[-80px]" /> */}
                 </div>
             </h2>
             <p className="text-center text-secondary max-w-[1200px] mx-auto leading-9">The focus of our IT Consulting Services is to enhance a client’s products and processes by adapting new technologies. Whatever your business objectives, implementing new technologies will affect, to some degree, your existing business processes and systems.</p>

@@ -1,7 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-const CerificationCourse = ({title, image, link, text, reversed=false}) => (
+const CertificationCourse = ({title, image, link, text, reversed=false}) => (
     <div className={`flex flex-wrap  justify-center items-center px-6 sm:px-16 py-8 sm:py-2 ${reversed && "md:flex-row-reverse"}`}>
         <div className={`p-3 w-full md:w-[50%] lg:w-[30%]`}>
             {/* <div className="py-5">
@@ -18,4 +18,4 @@ const CerificationCourse = ({title, image, link, text, reversed=false}) => (
     </div>
 );
 
-export default CerificationCourse;
+export default CertificationCourse;

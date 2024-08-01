@@ -48,7 +48,7 @@ const CarouselSlide2 = () => {
                     <div className="py-1">{landing.carousel.content2[1]}</div>
                     <div className="py-1">{landing.carousel.content2[1]}</div>
                 </div>
-                <Link to='/services' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[6%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md">Consulting Services</Link>
+                <Link to='/services' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[6%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md z-10">Consulting Services</Link>
             </div>
             <div className="absolute top-0 right-[5%] w-[60%]">
                 <img src="../images/landing_carousel_2.png" alt="carousel 2" className="" />
@@ -89,8 +89,8 @@ const CarouselSlide4 = () => {
                     <div className="py-1">{landing.carousel.content4[1]}</div>
                 </div>
                 <div className="mt-[10%] sm:mt-0">
-                    <Link to='/news' className="inline-block bg-primary text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md">Career Path Coureses</Link>
-                    <Link to='/news' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-2">Certification Coureses</Link>
+                    <Link to='/news' className="inline-block bg-primary text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md z-10">Career Path Coureses</Link>
+                    <Link to='/news' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-2 z-10">Certification Coureses</Link>
                 </div>
             </div>
             <div className="absolute top-0 right-[5%] w-[60%]">

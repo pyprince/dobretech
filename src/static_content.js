@@ -150,7 +150,7 @@ export const landing = {
             icon: 'career_coaching.svg'
         },
         {
-            title: 'Cerification Preparation',
+            title: 'Certification Preparation',
             content: `A great way to test your knowledge
                 and prepare you for exams with real
                 questions and flashcard experience,
@@ -174,7 +174,7 @@ export const landing = {
             }
         ]
     },
-    cerification_courses: [
+    certification_courses: [
         {
             title: 'Get Student ID card',
             text: `Dobretech provide certification and professional training courses include Cloud, Security, Networking, AI, providing valuable perspectives on the current IT & perspectives on the current IT & Telecommunications landscape and trends`,
@@ -721,6 +721,67 @@ export const news_content = [
             Supported substance consolidates parts of web based promoting and substance showcasing. It includes making substance, for example, a blog entry or video and paying for its consideration on a site that routinely distributes comparative substance. A piece of supported substance will seem to be like the remainder of the substance on the site yet will incorporate some sign that it’s supported. With execution showcasing, you would pay a pre-decided aps on your supported article navigates to your site from the article.</div>`,
         date: 'January 12, 2024',
         number: 12,
+        author: {
+            name: 'Titus',
+            description: 'Titus is a frequent speaker on the blogs.',
+            avatar: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2023/09/Titus-92x92-1.jpeg?fit=92%2C92&ssl=1',
+            links: {
+                facebook: 'https://web.facebook.com/people/Dobre-Technologies/100067183329468/',
+                twitter: 'https://twitter.com/DobreTechnolog1',
+                linkedin: 'https://www.linkedin.com/company/dobretech',
+                pinterest: 'https://www.instagram.com/dobretech/',
+            }
+        }
+    },
+    {
+        title: 'Internet Of Things (IOT)',
+        image: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2019/05/course7-1.jpg?resize=768%2C472&ssl=1',
+        tags: ['Design', 'Development'],
+        text: `<div class="tp-post-content">Another promising new technology trend is IoT. Many “things” are now being built with WiFi connectivity, meaning they can be connected to the Internet—and to each other. Hence, the Internet of Things, or IoT. The&nbsp;<a href="https://www.simplilearn.com/what-is-iot-how-and-why-it-matters-article" target="_blank" rel="noreferrer noopener">Internet of Things</a>&nbsp;is the future, and has already enabled devices, home appliances, cars and much more to be connected to and exchange data over the Internet.
+
+            As consumers, we’re already using and benefitting from IoT. We can lock our doors remotely if we forget to when we leave for work and preheat our ovens on our way home from work, all while tracking our fitness on our Fitbits. However,&nbsp;<a href="https://www.simplilearn.com/ways-businesses-use-iot-article" target="_blank" rel="noreferrer noopener">businesses&nbsp;</a>also have much to gain now and in the near future. The IoT can enable better safety, efficiency and decision-making for businesses as data is collected and analyzed. It can enable predictive maintenance, speed up medical care, improve customer service, and offer benefits we haven’t even imagined yet.
+            
+            And we’re only in the beginning stages of this new technology trend: Forecasts suggest that by 2030 around&nbsp;<a href="https://www.statista.com/statistics/802690/worldwide-connected-devices-by-access-technology/" target="_blank" rel="noreferrer noopener">50 billion&nbsp;</a>of these IoT devices will be in use around the world, creating a massive web of interconnected devices spanning everything from smartphones to kitchen appliances. The global spending on the Internet of Things (IoT) is forecast to reach&nbsp;<a href="https://www.statista.com/statistics/668996/worldwide-expenditures-for-the-internet-of-things/" target="_blank" rel="noreferrer noopener">1.1 trillion U.S. dollars in 2022.</a>&nbsp;New technologies such as 5G is expected to drive market growth in the coming years.
+            
+            And if you wish to step foot in this trending technology, you will have to learn about Information security,&nbsp;<a href="https://www.simplilearn.com/skillup-free-online-courses#AI-&amp;-Machine-Learning" target="_blank" rel="noreferrer noopener">AI and machine learning fundamentals</a>, networking, hardware interfacing,&nbsp;<a href="https://www.simplilearn.com/learn-data-analytics-for-beginners-skillup" target="_blank" rel="noreferrer noopener">data a</a><a href="https://www.simplilearn.com/learn-data-analytics-for-beginners-skillup" target="_blank" rel="noreferrer noopener">nalytics</a><a href="https://www.simplilearn.com/learn-data-analytics-for-beginners-skillup" target="_blank" rel="noreferrer noopener">, automation, understanding of embedded systems, and must have device and design knowledge</a>.
+            
+            &nbsp;
+            
+            <img class="alignnone wp-image-4310" src="https://dev.dobretech.com/wp-content/uploads/2021/07/Iot-300x176.jpg" alt="" width="1372" height="805">
+        
+            &nbsp;</div>`,
+        date: 'January 12, 2024',
+        number: 10,
+        author: {
+            name: 'Titus',
+            description: 'Titus is a frequent speaker on the blogs.',
+            avatar: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2023/09/Titus-92x92-1.jpeg?fit=92%2C92&ssl=1',
+            links: {
+                facebook: 'https://web.facebook.com/people/Dobre-Technologies/100067183329468/',
+                twitter: 'https://twitter.com/DobreTechnolog1',
+                linkedin: 'https://www.linkedin.com/company/dobretech',
+                pinterest: 'https://www.instagram.com/dobretech/',
+            }
+        }
+    },
+    {
+        title: 'Computing Technology For The Consulting',
+        image: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2019/05/course1-1-1.jpg?w=1400&ssl=1',
+        tags: ['Design'],
+        text: `<div class="tp-post-content">At an industry level, technology has done two things. First, it has introduced a complete new field of work, commonly bundled under the label ‘digital transformation’. This segment is the fastest growing segment of the consulting sector and according to estimates from Source Global Research it is now worth around one fifth of the entire industry in mature markets. Clients are embracing technologies such as artificial intelligence, robotics, automation and internet of things to gain competitive advantages, and in doing so, tapping the expertise of consultants who stand at the forefront of such developments.
+
+            Second, the growing role of technology has blurred the lines between traditional consulting work and technology work. A decade ago, there was a clear cut between consulting work (project-based, value-adding advisory based), technology consulting work (project-based tasks such as systems implementation) and non-consulting technology consulting work (more routine tasks such as application development and maintenance). With digital now at the heart of innovation and performance improvement, consulting firms are delivering much more technology work, and are extending their services into a realm previously classified as non-consulting. Consultancies now work with clients to design and develop apps, prototypes and intelligent systems, among other areas.
+            
+            <img class="alignnone wp-image-4761" src="https://dev.dobretech.com/wp-content/uploads/2024/01/a1-300x270.png" alt="" width="1222" height="1100">
+            
+            The global consulting market is in the process of being reorganised itself,” said Rousset, “due to the growing diversification of the activities of consultancy firms.” This development is however not just a consequence of technology – the industry is making similar moves branching into others fields of professional services, including design thinking, marketing &amp; advertising and engineering.
+            
+            Technology is also making an impact in consulting firms' own internal operations. Unsurprisingly, firms are embedding automation in their own processes to improve primary activities such as project management, resourcing and activities for client engagements, but also secondary processes such as finance, human resources and internal reporting. It is helping consulting firms scale, manage and connect with their talent more easily.
+            
+            At the same time, the rise of digital is also a threat for the operation of consultancies. Technology is allowing consulting firms to operate in a more agile manner, as illustrated by the rise of digital-driven networks of consultants or groups of independent consultants. These collectives use technology to team up more effectively, while others have used technology to enable digital matching platforms. These user-friendly apps can assemble teams of consultants with a few simple swipes on a smart-phone.
+            <h2></h2></div>`,
+        date: 'January 12, 2024',
+        number: 30,
         author: {
             name: 'Titus',
             description: 'Titus is a frequent speaker on the blogs.',

@@ -91,7 +91,7 @@ const NewsContent = ({title, image, tags, text}) => {
             <img src={`${image}`} alt={title} className="w-full rounded-t-[20px] aspect-video" />
             <div className="mt-5">
                 {tags.map((tag, i) => (
-                    <span className="bg-[#0B707780] text-white px-4 py-1 mx-3 rounded-md">{tag}</span>
+                    <span className="text-secondary px-4 py-1 mx-3 border rounded-md">{tag}</span>
                 ))}
             </div>
             <p className="text-secondary text-justify p-5 sm:p-10" dangerouslySetInnerHTML={{__html: text}}></p>

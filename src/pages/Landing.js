@@ -1,17 +1,26 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Carousel } from 'react-responsive-carousel';
-import CerificationCourse from '../components/CerificationCourse';
+import CertificationCourse from '../components/CertificationCourse';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import {CarouselSlide1, CarouselSlide2, CarouselSlide3, CarouselSlide4} from '../components/CarouselSlides';
 import {landing, news_content} from '../static_content' // dummy sample data to feed
 import ReviewCarousel from "../components/ReviewCarousel";
 import NewsCard from "../components/NewsCard";
+import Modal from "../components/Modal";
 
 export default function Landing() {
-
     const navigate = useNavigate();
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+    const closeModal = () => {
+        setIsModalOpen(false);
+    }
+
     return (
         <div className="text-primary min-h-[600px]">
             {/* Carousel */}
@@ -22,8 +31,9 @@ export default function Landing() {
                     <CarouselSlide3 />
                     <CarouselSlide4 />
                 </Carousel>
-                {/* <img src="../images/icons/chat.svg" onClick={openModal} className="absolute bottom-[5%] right-[3%] w-[30px] sm:w-auto cursor-pointer" alt="chat icon" /> */}
+                <img src="../images/icons/chat.svg"  className="absolute bottom-[5%] right-[3%] w-[30px] sm:w-auto z-10 cursor-pointer" onClick={openModal} alt="chat icon" />
             </div>
+            <Modal isOpen={isModalOpen} onClose={closeModal} />
             {/* Course List */}
             <div className="landing-courses">
                 <div className="flex flex-col sm:flex-row justify-center text-white">
@@ -118,16 +128,16 @@ export default function Landing() {
                     </div>
                 </div>
             </div>
-            {/* cerification courses */}
+            {/* certification courses */}
             <div className="flex justify-center text-3xl sm:text-4xl font-semibold sm:mt-16 py-8">
                 <div className="">
-                    Cerification Courses
-                    <img src="../images/icons/curved_line.svg" alt="saucy curved line" className="w-[60%] ml-[40%] sm:ml-[60%] sm:w-auto" />
+                    Certification Courses
+                    {/* <img src="../images/icons/curved_line.svg" alt="saucy curved line" className="w-[60%] ml-[40%] sm:ml-[60%] sm:w-auto" /> */}
                 </div>
             </div>
-            {landing.cerification_courses.map((course, i) => {
+            {landing.certification_courses.map((course, i) => {
                 if(i === 1) 
-                    return <CerificationCourse 
+                    return <CertificationCourse 
                       title={course.title} 
                       text={course.text} 
                       image={course.image} 
@@ -135,7 +145,7 @@ export default function Landing() {
                       reversed={true} 
                       key={i}
                     />
-                return <CerificationCourse 
+                return <CertificationCourse 
                             title={course.title} 
                             text={course.text} 
                             image={course.image} 
@@ -187,7 +197,7 @@ export default function Landing() {
             {/* latest news */}
             <div className="flex justify-center text-4xl font-semibold mt-12">
                 <div>
-                    <img src="../images/icons/curved_line_reversed.svg" alt="saucy curve" className="ml-[-40%] sm:ml-[-50%] mb-1" />
+                    {/* <img src="../images/icons/curved_line_reversed.svg" alt="saucy curve" className="ml-[-40%] sm:ml-[-50%] mb-1" /> */}
                     Latest News
                 </div>
             </div>
@@ -208,11 +218,10 @@ export default function Landing() {
             <div className="flex justify-center text-4xl font-semibold py-1">
                 <div className="text-center relative">
                     What Our <span className="text-tomato">Students</span> Says About
-                    <img src="../images/icons/curved_line.svg" alt="saucy curved" className="absolute right-0" />
+                    {/* <img src="../images/icons/curved_line.svg" alt="saucy curved" className="absolute right-0" /> */}
                 </div>
             </div>
             <ReviewCarousel />
         </div>
     )
 }
-
