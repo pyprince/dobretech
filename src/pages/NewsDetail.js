@@ -87,7 +87,7 @@ const OtherNews = ({id, title, image, date}) => {
 const NewsContent = ({title, image, tags, text}) => {
     return (
         <div className="news-detail-card">
-            <h2 className="text-primary text-4xl font-semibold text-center py-20">{title}</h2>
+            <h1 className="text-primary text-4xl font-semibold text-center py-20">{title}</h1>
             <img src={`${image}`} alt={title} className="w-full rounded-t-[20px] aspect-video" />
             <div className="mt-5">
                 {tags.map((tag, i) => (
