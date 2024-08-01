@@ -140,5 +140,4 @@ const blog_categories = [
     },
 ]
 
-
 export default NewsDetail;

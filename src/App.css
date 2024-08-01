@@ -112,6 +112,14 @@ body {
   box-shadow: 0px 17px 30px -10px rgba(0, 122, 132, 0.15);
 }
 
+.apply-form-input, .react-date-picker {
+  display: block;
+}
+
+.apply-form-input .react-date-picker__wrapper {
+  border: none;
+}
+
 /* about us page */
 .dobre-signify {
   background-image: url(../public/images/about_us_gradient_bg.png);

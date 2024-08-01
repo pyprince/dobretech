@@ -33,8 +33,8 @@ const Footer = () => {
                         <h3 className='text-2xl font-semibold py-5'>Important links</h3>
                         <div>
                             {footer.important_links.map((link, i) =>
-                                <div className='text-center sm:text-left'>
-                                    <Link to={link.path} className='block py-2 hover:text-tomato' key={i}>
+                                <div className='text-center sm:text-left' key={i}>
+                                    <Link to={link.path} className='block py-2 hover:text-tomato'>
                                         {link.title}
                                     </Link>
                                 </div>

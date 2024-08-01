@@ -77,7 +77,7 @@ export default function Landing() {
                             </div>
                             <h4 className="text-xl font-semibold py-2">{feature.title}</h4>
                             <p className="py-2 mb-5">{feature.content}</p>
-                            <Link to='/' className="landing-readmore-button font-semibold rounded-md px-6 py-3 hover:bg-primary hover:text-white">Read More</Link>
+                            {/* <Link to='/' className="landing-readmore-button font-semibold rounded-md px-6 py-3 hover:bg-primary hover:text-white">Read More</Link> */}
                         </div>
                     ))
                 }
@@ -145,7 +145,7 @@ export default function Landing() {
             })}
             {/* activities */}
             <div className="px-6 md:px-20 py-8">
-                <div className="flex flex-wrap rounded-[30px] landing-activities">
+                <div className="flex flex-wrap rounded-[30px] max-w-[1500px] mx-auto landing-activities">
                     <div className="w-full lg:w-[40%]">
                         <img src="../images/work_activities.png" alt="working man" className="rounded-tl-[30px] rounded-tr-[30px] lg:rounded-tr-none lg:rounded-bl-[30px] w-full h-full" />
                     </div>
@@ -179,7 +179,7 @@ export default function Landing() {
                             </div>
                         </div>
                         <div className="flex flex-end pr-10">
-                            <Link to='/' className="px-5 py-2 bg-primary text-white rounded-md ml-auto text-base">Explore More</Link>
+                            <Link to='/aboutus' className="px-5 py-2 bg-primary text-white rounded-md ml-auto text-base">Explore More</Link>
                         </div>
                     </div>
                 </div>

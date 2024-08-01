@@ -1,5 +1,10 @@
 import React, {useState, useRef} from "react";
+import DatePicker from "react-date-picker";
 import countries from "../countries";
+
+import 'react-date-picker/dist/DatePicker.css';
+import 'react-calendar/dist/Calendar.css';
+import { apply } from "../static_content";
 
 const country_names = countries.map(country => country.name);
 const genders = ['Male', 'Female'];
@@ -21,6 +26,7 @@ const Apply = () => {
         date: true,
         paymentMethod: true
     });
+    const [birthDate, setBirthDate] = useState('');
 
     const setFirstName = (isValid) => {
         setValidation(prev => ({ ...prev, firstName: isValid }));
@@ -61,19 +67,26 @@ const Apply = () => {
         setValidation(prev => ({...prev, program: isValid}));
     }
 
-    const setDate = (isValid) => {
-        setValidation(prev => ({...prev, date: isValid}));
+    const setBirthDateValidation = (isValid) => {
+        setValidation(prev => ({...prev, birth: isValid}));
    }
 
     const setPaymentMethod = (isValid) => {
         setValidation(prev => ({...prev, paymentMethod: isValid}));
    }
 
+   const handleDateChange = (newDate) => {
+        if (newDate) {
+            const formattedDate = newDate.toISOString().slice(0, 10);
+            setBirthDate(formattedDate);
+            console.log("Selected Date:", formattedDate);
+        }
+    };
+
     const firstNameRef = useRef();
     const lastNameRef = useRef();
     const emailRef = useRef();
     const phoneRef = useRef();
-    const birthRef = useRef();
     const addressRef = useRef();
     const genderRef = useRef();
     const countryRef = useRef();
@@ -90,24 +103,62 @@ const Apply = () => {
         validateField(lastNameRef, setLastName);
         validateField(emailRef, setEmail);
         validateField(phoneRef, setPhone);
-        validateField(birthRef, setBirth);
         validateField(addressRef, setAddress);
         validateField(genderRef, setGender);
         validateField(countryRef, setCountry);
         validateField(programRef, setProgram);
-        validateField(dateRef, setDate);
+        if(birthDate) setBirthDateValidation(true); else setBirthDateValidation(false);
         validateField(paymentMethodRef, setPaymentMethod);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const firstName = firstNameRef.current.value;
+        const lastName = lastNameRef.current.value;
+        const email = emailRef.current.value;
+        const phone = phoneRef.current.value;
+        const address = addressRef.current.value;
+        const gender = genderRef.current.value;
+        const country = countryRef.current.value;
+        const program = programRef.current.value;
+        const date = dateRef.current.value;
+        const payment_method = paymentMethodRef.current.value;
+        
+        let flag = true;
+        if(!firstName) flag = false;
+        if(!lastName) flag = false;
+        if(!email) flag = false;
+        if(!phone) flag = false;
+        if(!birthDate) flag = false;
+        if(!address) flag = false;
+        if(!gender) flag = false;
+        if(!country) flag = false;
+        if(!program) flag = false;
+        if(!date) flag = false;
+        if(!payment_method) flag = false;
+        
         validateInfo();
-        if (Object.values(validation).every(Boolean)) {
+        if (flag) {
             // Proceed with form submission
-            console.log('Application sent!');
+            const applyData = {
+                firstName: firstNameRef.current.value,
+                lastName: lastNameRef.current.value,
+                email: emailRef.current.value,
+                phone: phoneRef.current.value,
+                birth: birthDate,
+                address: addressRef.current.value,
+                gender: genderRef.current.value,
+                country: countryRef.current.value,
+                program: programRef.current.value,
+                date: dateRef.current.value,
+                payment_method: paymentMethodRef.current.value
+            }
+            console.log('Application sent!', applyData);
         }
         else {
             // Alert or push notification
+            console.log("Please fill all fields.");
             return;
         }
     }
@@ -118,19 +169,30 @@ const Apply = () => {
             <p className="text-secondary text-center text-xl py-1">Don't be late, apply with us today!</p>
             <div className="flex flex-wrap justify-center items-center gap-10 p-10 mb-10">
                 <form className="flex flex-col sm:gap-5 w-[600px] apply-form">
-                    <div className="sm:flex flex-wrap items-center justify-center sm:justify-between">
+                    <div className="sm:flex flex-wrap justify-center sm:justify-between">
                         <TextInputElement type='text' placeholder='First Name' isValid={validation.firstName} elementRef={firstNameRef} />
                         <TextInputElement type='text' placeholder='Last Name' isValid={validation.lastName} elementRef={lastNameRef} />
                     </div>
-                    <div className="sm:flex flex-wrap items-center justify-center sm:justify-between">
+                    <div className="sm:flex flex-wrap justify-center sm:justify-between">
                         <TextInputElement type='email' placeholder='Email' isValid={validation.email} elementRef={emailRef} />
                         <TextInputElement type='text' placeholder='Phone' isValid={validation.phone} elementRef={phoneRef} />
                     </div>
-                    <div className="sm:flex flex-wrap items-center justify-center sm:justify-between">
-                        <TextInputElement type='text' placeholder='Date of Birth' isValid={validation.birth} elementRef={birthRef} />
-                        <TextInputElement type='text' placeholder='Address' isValid={validation.address} elementRef={addressRef} />
+                    <div className="sm:flex flex-wrap justify-center sm:justify-between">
+                        <div>
+                            <div className="text-secondary text-sm px-4 pt-1">Birth of Date</div>
+                            <div className="apply-form-input text-black sm:w-[280px] rounded-md py-3">
+                                <DatePicker 
+                                    onChange={handleDateChange} 
+                                    value={birthDate}
+                                />
+                            </div>
+                            {!validation.birth && <div className="text-red-500 text-sm px-4 pt-1">This field is required!</div>}
+                        </div>
+                        <div className="mt-5">
+                            <TextInputElement type='text' placeholder='Address' isValid={validation.address} elementRef={addressRef} />
+                        </div>
                     </div>
-                    <div className="sm:flex flex-wrap items-center justify-center sm:justify-between">
+                    <div className="sm:flex flex-wrap justify-center sm:justify-between">
                         <SelectElement values={genders} placeholder='Gender' elementRef={genderRef} isValid={validation.gender} width={'280px'} />
                         <SelectElement values={country_names} placeholder='Select Country' isValid={validation.country} elementRef={countryRef} width={'280px'} />
                     </div>
@@ -165,7 +227,7 @@ const Apply = () => {
                         </div>
                     </div>
                     <div className="text-center mt-6">
-                        <button className="bg-tomato text-white mx-auto px-10 py-2 rounded-md" onClick={() => {}}>Download Admission Steps</button>
+                        <button className="bg-tomato text-white mx-auto px-10 py-2 rounded-md active:text-primary" onClick={() => {}}>Download Admission Steps</button>
                     </div>
                 </div>
             </div>
