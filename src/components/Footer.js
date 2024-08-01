@@ -41,16 +41,16 @@ const Footer = () => {
                             )}
                         </div>
                         <div className='gap-2 py-5 hidden sm:flex'>
-                            <Link to='https://facebook.com/' target='_BLANK'>
+                            <Link to='https://web.facebook.com/people/Dobre-Technologies/100067183329468/' target='_BLANK'>
                                 <img src='../images/icons/facebook.svg' alt='Facebook' />
                             </Link>
-                            <Link to='https://twitter.com/' target='_BLANK'>
+                            <Link to='https://twitter.com/DobreTechnolog1/' target='_BLANK'>
                                 <img src='../images/icons/twitter.svg' alt='X' />
                             </Link>
-                            <Link to='https://linkedin.com/' target='_BLANK'>
+                            <Link to='https://linkedin.com/company/dobretech/' target='_BLANK'>
                                 <img src='../images/icons/linkedin.svg' alt='LinkedIn' />
                             </Link>
-                            <Link to='https://instagram.com/' target='_BLANK'>
+                            <Link to='https://www.instagram.com/dobretech/' target='_BLANK'>
                                 <img src='../images/icons/instagram.svg' alt='Instagram' />
                             </Link>
                         </div>
@@ -75,16 +75,16 @@ const Footer = () => {
                 </div>
             </div>
             <div className='gap-2 py-5 flex justify-center sm:hidden'>
-                <Link to='https://facebook.com/' target='_BLANK'>
+                <Link to='https://web.facebook.com/people/Dobre-Technologies/100067183329468/' target='_BLANK'>
                     <img src='../images/icons/facebook.svg' alt='Facebook' />
                 </Link>
-                <Link to='https://twitter.com/' target='_BLANK'>
+                <Link to='https://twitter.com/DobreTechnolog1/' target='_BLANK'>
                     <img src='../images/icons/twitter.svg' alt='X' />
                 </Link>
-                <Link to='https://linkedin.com/' target='_BLANK'>
+                <Link to='https://linkedin.com/company/dobretech/' target='_BLANK'>
                     <img src='../images/icons/linkedin.svg' alt='LinkedIn' />
                 </Link>
-                <Link to='https://instagram.com/' target='_BLANK'>
+                <Link to='https://www.instagram.com/dobretech/' target='_BLANK'>
                     <img src='../images/icons/instagram.svg' alt='Instagram' />
                 </Link>
             </div>
