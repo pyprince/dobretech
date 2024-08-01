@@ -5,7 +5,7 @@ const NewsCard = ({id, image, title, date, number}) => {
     return (
         <div className="w-[360px] rounded-3xl landing-readmore-button my-5">
             <div className="w-[360px] h-[350px]">
-                <img src={`../images/${image}`} alt="news" className="rounded-t-3xl w-full h-full" />
+                <img src={image} alt="news" className="rounded-t-3xl w-full h-full" />
             </div>
             <div className="h-[250px] flex flex-col content-between">
                 <h4 className="text-secondary text-xl px-10 py-6">{title}</h4>

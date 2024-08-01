@@ -1,6 +1,6 @@
 import React from "react";
 import NewsCard from "../components/NewsCard";
-import { landing } from "../static_content";
+import { news_content } from "../static_content";
 
 const News = () => {
     return (
@@ -13,13 +13,7 @@ const News = () => {
                 </div>
             </div>
             <div className="flex flex-wrap justify-center gap-6 lg:gap-12 mb-20 max-w-[1200px] mx-auto">
-                {landing.news.map((item, i) => (
-                    <NewsCard id={i+1} image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
-                ))}
-                {landing.news.map((item, i) => (
-                    <NewsCard id={i+1} image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
-                ))}
-                {landing.news.map((item, i) => (
+                {news_content.map((item, i) => (
                     <NewsCard id={i+1} image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
                 ))}
             </div>

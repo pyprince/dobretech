@@ -5,7 +5,7 @@ import CerificationCourse from '../components/CerificationCourse';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import {CarouselSlide1, CarouselSlide2, CarouselSlide3, CarouselSlide4} from '../components/CarouselSlides';
-import {landing} from '../static_content' // dummy sample data to feed
+import {landing, news_content} from '../static_content' // dummy sample data to feed
 import ReviewCarousel from "../components/ReviewCarousel";
 import NewsCard from "../components/NewsCard";
 
@@ -196,7 +196,7 @@ export default function Landing() {
                 opportunities to confidently take risks.
             </div>
             <div className="flex flex-wrap mt-16 px-12 gap-16 justify-center">
-                {landing.news.map((item, i) => (
+                {news_content.slice(0, 3).map((item, i) => (
                     <NewsCard id={i+1} image={item.image} title={item.title} date={item.date} number={item.number} key={i} />
                 ))}
             </div>
