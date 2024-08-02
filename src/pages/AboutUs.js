@@ -71,10 +71,10 @@ const AboutUs = () => {
             <div className="text-center mt-6 sm:mt-20 max-w-[1200px] mx-auto">
                 <h5 className="text-primary text-2xl sm:text-3xl font-semibold py-2">Welcome To DobreTech</h5>
                 <h4 className="text-primary text-3xl sm:text-5xl font-semibold py-4">New Experience! Learn to the Next Level</h4>
-                <p className="text-secondary text-xl leading-10 max-w-[800px] mx-auto">
-                    Were we turn every class into an engaging, practical and networking journey
-                    where our students learn theory, indepth concepts and perform hands-on practice in real-world scenarios.
-                    Looking for a change that brings more than just a job, but a better life? 
+                <p className="text-secondary text-xl leading-10 max-w-[1200px] mx-auto">
+                    Were we turn every class into an engaging, practical and networking journey<br />
+                    where our students learn theory, indepth concepts and perform hands-on practice in real-world scenarios.<br />
+                    Looking for a change that brings more than just a job, but a better life?
                 </p>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-20 my-20">
