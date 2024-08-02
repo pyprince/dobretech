@@ -795,3 +795,86 @@ export const news_content = [
         }
     }
 ]
+
+export const events = [
+    {
+        title: 'IoT Forum Africa 2024',
+        location: 'Virtual Conference',
+        image: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2024/01/IOT2.png?resize=768%2C729&ssl=1',
+        content: `Africa Tech Summit Nairobi connects tech leaders from the African ecosystem and international players under one roof. Network with key stakeholders including tech corporates, mobile operators, Africa fintech’s, DeFi & crypto ventures, investors, leading start-ups, regulators and industry stakeholders driving business and investment forward.
+        Following three successful Summits in Rwanda, the fourth edition convenes in Nairobi, Kenya on September 14 & 15 2021 and will feature the Africa Money & DeFi Summit, Africa Startup Summit and the Africa Mobile Summit.`,
+        duration: '4h 30m 15s',
+        start_time: '08:00',
+        end_time: '17:00',
+        start_date: 'March 24, 2024',
+        end_date: 'March 25, 2024',
+        participants: 200
+    },
+    {
+        title: 'Africa Tech Summit Nairobi 2024',
+        location: 'Sarit Expo Centre Pio Gama Pinto Road, Westlands Nairobi, Kenya',
+        image: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2024/01/techsubmit.png?resize=300%2C124&ssl=1',
+        content: `Africa Tech Summit Nairobi connects tech leaders from the African ecosystem and international players under one roof. Network with key stakeholders including tech corporates, mobile operators, Africa fintech’s, DeFi & crypto ventures, investors, leading start-ups, regulators and industry stakeholders driving business and investment forward.
+        Following three successful Summits in Rwanda, the fourth edition convenes in Nairobi, Kenya on September 14 & 15 2021 and will feature the Africa Money & DeFi Summit, Africa Startup Summit and the Africa Mobile Summit.`,
+        duration: '4h 30m 15s',
+        start_time: '08:00',
+        end_time: '17:00',
+        start_date: 'March 24, 2024',
+        end_date: 'March 25, 2024',
+        participants: 200
+    },
+    {
+        title: 'Digital Transformation Congress 2024',
+        location: 'Virtual Conference',
+        image: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2024/01/digitrans.png?resize=768%2C677&ssl=1',
+        content: `Africa Tech Summit Nairobi connects tech leaders from the African ecosystem and international players under one roof. Network with key stakeholders including tech corporates, mobile operators, Africa fintech’s, DeFi & crypto ventures, investors, leading start-ups, regulators and industry stakeholders driving business and investment forward.
+        Following three successful Summits in Rwanda, the fourth edition convenes in Nairobi, Kenya on September 14 & 15 2021 and will feature the Africa Money & DeFi Summit, Africa Startup Summit and the Africa Mobile Summit.`,
+        duration: '4h 30m 15s',
+        start_time: '08:00',
+        end_time: '17:00',
+        start_date: 'March 24, 2024',
+        end_date: 'March 25, 2024',
+        participants: 200
+    },
+    {
+        title: 'Africa Tech Festival 2024',
+        location: 'CTICC, Cape Town and Virtual Event',
+        image: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2024/01/africa.png?resize=768%2C523&ssl=1',
+        content: `Africa Tech Summit Nairobi connects tech leaders from the African ecosystem and international players under one roof. Network with key stakeholders including tech corporates, mobile operators, Africa fintech’s, DeFi & crypto ventures, investors, leading start-ups, regulators and industry stakeholders driving business and investment forward.
+        Following three successful Summits in Rwanda, the fourth edition convenes in Nairobi, Kenya on September 14 & 15 2021 and will feature the Africa Money & DeFi Summit, Africa Startup Summit and the Africa Mobile Summit.`,
+        duration: '4h 30m 15s',
+        start_time: '08:00',
+        end_time: '17:00',
+        start_date: 'March 24, 2024',
+        end_date: 'March 25, 2024',
+        participants: 200
+    },
+    {
+        title: 'International Exhibition for Enterprises SMEs and Partnerships of Yaounde',
+        location: ' Congress Palace, Yaounde, Cameroon',
+        image: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2024/01/yd.png?w=491&ssl=1',
+        content: `Africa Tech Summit Nairobi connects tech leaders from the African ecosystem and international players under one roof. Network with key stakeholders including tech corporates, mobile operators, Africa fintech’s, DeFi & crypto ventures, investors, leading start-ups, regulators and industry stakeholders driving business and investment forward.
+        Following three successful Summits in Rwanda, the fourth edition convenes in Nairobi, Kenya on September 14 & 15 2021 and will feature the Africa Money & DeFi Summit, Africa Startup Summit and the Africa Mobile Summit.`,
+        duration: '4h 30m 15s',
+        start_time: '08:00',
+        end_time: '17:00',
+        start_date: 'March 24, 2024',
+        end_date: 'March 25, 2024',
+        participants: 200
+    },
+    {
+        title: 'UB - DobreTech Opening Ceremony',
+        location: 'University of Buea, Molyko',
+        image: 'https://i0.wp.com/dobretech.com/wp-content/uploads/2024/01/scene-10-image.png?resize=768%2C253&ssl=1',
+        content: `Africa Tech Summit Nairobi connects tech leaders from the African ecosystem and international players under one roof. Network with key stakeholders including tech corporates, mobile operators, Africa fintech’s, DeFi & crypto ventures, investors, leading start-ups, regulators and industry stakeholders driving business and investment forward.
+        Following three successful Summits in Rwanda, the fourth edition convenes in Nairobi, Kenya on September 14 & 15 2021 and will feature the Africa Money & DeFi Summit, Africa Startup Summit and the Africa Mobile Summit.`,
+        duration: '4h 30m 15s',
+        start_time: '08:00',
+        end_time: '17:00',
+        start_date: 'March 24, 2024',
+        end_date: 'March 25, 2024',
+        participants: 200
+    },
+]
+
+export const monthAbbreviations = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];

@@ -4,13 +4,12 @@ import countries from "../countries";
 
 import 'react-date-picker/dist/DatePicker.css';
 import 'react-calendar/dist/Calendar.css';
-import { apply } from "../static_content";
 
 const country_names = countries.map(country => country.name);
 const genders = ['Male', 'Female'];
 const programs = ['Cloud Computing', 'Cybersecurity', 'UB Program'];
 const dates = ['October 2024', 'November 2024', 'Feburary 2025'];
-const payment_methods = ['Paypal', 'Moon Pay'];
+const payment_methods = ['Paypal','Stripe', 'Moon Pay'];
 
 const Apply = () => {
     const [validation, setValidation] = useState({
@@ -170,7 +169,7 @@ const Apply = () => {
                         <TextInputElement type='text' placeholder='Last Name' isValid={validation.lastName} elementRef={lastNameRef} />
                     </div>
                     <div className="sm:flex flex-wrap justify-center sm:justify-between">
-                        <TextInputElement type='email' placeholder='Email' isValid={validation.email} elementRef={emailRef} />
+                        <TextInputElement type='email' placeholder='Email' isValid={validation.email} elementRef={emailRef} required />
                         <TextInputElement type='text' placeholder='Phone' isValid={validation.phone} elementRef={phoneRef} />
                     </div>
                     <div className="sm:flex flex-wrap justify-center sm:justify-between">

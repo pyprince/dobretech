@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const NewsCard = ({id, image, title, date, number}) => {
     return (
         <div className="w-[360px] rounded-3xl landing-readmore-button my-5">
-            <div className="w-[360px] h-[350px]">
+            <div className="w-[360px]">
                 <img src={image} alt="news" className="rounded-t-3xl w-full h-full" />
             </div>
-            <div className="h-[250px] flex flex-col content-between">
+            <div className="">
                 <h4 className="text-secondary text-xl px-10 py-6">{title}</h4>
                 <div className="mt-auto flex justify-between items-center px-5 py-5">
                     <div className="flex gap-2">

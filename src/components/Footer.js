@@ -91,7 +91,7 @@ const Footer = () => {
             <div className='flex flex-col sm:flex-row justify-between py-3 border-t border-gray-300'>
                 <div className='text-gray-300 font-xl pb-2'>&copy;Copyright DobreTech 2024.</div>
                 <div>
-                    <Link to='privacypolicy' className='text-white text-xs mr-2 hover:text-tomato sm:mr-5'>Privacy Policy</Link>
+                    <Link to='privacypolicy' className='text-white mr-2 hover:text-tomato sm:mr-5'>Privacy Policy</Link>
                     <Link to='termsandconditions' className='text-white hover:text-tomato'>Terms & Conditions</Link>
                 </div>
             </div>
