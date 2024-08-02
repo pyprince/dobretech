@@ -12,7 +12,7 @@ const CarouselSlide1 = () => {
                     <div className="py-1 sm:py-2">{landing.carousel.content1[0]}</div>
                     <div className="py-1 sm:py-2">{landing.carousel.content1[1]}</div>
                 </div>
-                <Link to='/aboutus' className="inline-block text-sm sm:text-base lg:text-xl  sm:mt-[10%] px-3 sm:px-10 py-1 sm:py-2 lg:py-3 border-2 rounded-md sm:rounded-xl">About</Link>
+                <Link to='/aboutus' className="inline-block text-sm sm:text-base lg:text-xl  sm:mt-[10%] px-3 sm:px-10 py-1 sm:py-2 border-2 rounded-md sm:rounded-xl">About</Link>
             </div>
             <div className="absolute left-[30%] lg:left-[40%] bottom-1 sm:bottom-12 lg:bottom-24 xl:bottom-36 flex gap-2 lg:gap-6">
                 <div className="h-[60px] sm:h-[120px] md:h-[180px]">
@@ -73,7 +73,7 @@ const CarouselSlide3 = () => {
                     <div className="">{landing.carousel.content3[4]}</div>
                 </div>
                 <div className="text-right pr-12">
-                    <Link to='/news' className="hidden sm:inline-block bg-tomato text-white text-[12px] md:text-base mt-[-3%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-auto">Explore Our Courses</Link>
+                    {/* <Link to='/news' className="hidden sm:inline-block bg-tomato text-white text-[12px] md:text-base mt-[-3%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-auto">Explore Our Courses</Link> */}
                 </div>
             </div>
         </div>
@@ -89,8 +89,8 @@ const CarouselSlide4 = () => {
                     <div className="py-1">{landing.carousel.content4[1]}</div>
                 </div>
                 <div className="mt-[10%] sm:mt-0">
-                    <Link to='/news' className="inline-block bg-primary text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md z-10">Career Path Coureses</Link>
-                    <Link to='/news' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-2 z-10">Certification Coureses</Link>
+                    {/* <Link to='/news' className="inline-block bg-primary text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md z-10">Career Path Coureses</Link>
+                    <Link to='/news' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-2 z-10">Certification Coureses</Link> */}
                 </div>
             </div>
             <div className="absolute top-0 right-[5%] w-[60%]">

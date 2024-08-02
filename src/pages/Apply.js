@@ -224,7 +224,7 @@ const Apply = () => {
                         </div>
                     </div>
                     <div className="text-center mt-6">
-                        <button className="bg-tomato text-white mx-auto px-10 py-2 rounded-md active:text-primary" onClick={() => {}}>Download Admission Steps</button>
+                        {/* <button className="bg-tomato text-white mx-auto px-10 py-2 rounded-md active:text-primary" onClick={() => {}}>Download Admission Steps</button> */}
                     </div>
                 </div>
             </div>
@@ -234,7 +234,7 @@ const Apply = () => {
 
 const TextInputElement = ({type, elementRef, placeholder, isValid}) => {
     let validationText = 'This field is required!';
-    if(type === 'email' && elementRef.current.value.length > 0) validationText = 'Please enter valid email address.';
+    if(type === 'email') validationText = 'Please enter valid email address.';
     return (
         <div className="py-2">
             <div className="apply-form-input sm:w-[280px] rounded-md">

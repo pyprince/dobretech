@@ -121,7 +121,7 @@ export default function Landing() {
                             }
                         </div>
                         <div className="mt-10 relative z-10">
-                            <Link to='/community' className="bg-white sm:text-xl text-primary rounded-md px-4 sm:px-6 py-3 hover:bg-primary hover:text-white">View full Events</Link>
+                            <Link to='/community' className="bg-white sm:text-xl text-primary rounded-md px-4 sm:px-6 py-3 hover:bg-tomato hover:text-white">View full Events</Link>
                         </div>
                         <img src="/images/upcoming_events_vector.png" alt="vector" className="absolute left-0 bottom-0" />
                         <img src="/images/upcoming_events_character.png" alt="Event woman" className="static block ml-auto mt-[-80px] lg:absolute bottom-0 right-[-50px] z-0" />

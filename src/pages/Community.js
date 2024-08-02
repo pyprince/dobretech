@@ -4,7 +4,7 @@ import { events, monthAbbreviations } from "../static_content";
 
 const Community = () => {
     return (
-        <div className="max-w-[1400px] mx-auto mb-20">
+        <div className="max-w-[1400px] mx-auto mb-32">
             <h1 className="text-3xl sm:text-5xl text-center text-primary font-semibold py-10 sm:mt-10">Ignite Your Tech Journey!</h1>
             <div className="flex flex-wrap justify-center sm:gap-12">
                 {events.map((event, i) => (

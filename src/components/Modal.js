@@ -98,6 +98,7 @@ const Modal = ({ isOpen, onClose }) => {
                             value={formData.message}
                             className='w-full outline-none text-black h-32'
                             onChange={handleChange}
+                            required
                         />
                     </div>
                     <div className='text-center mt-8'>
