@@ -27,38 +27,38 @@ const Apply = () => {
     });
     const [birthDate, setBirthDate] = useState('');
 
-    const setFirstName = (isValid) => {
+    const setFirstNameValidation = (isValid) => {
         setValidation(prev => ({ ...prev, firstName: isValid }));
     }
 
-    const setLastName = (isValid) => {
+    const setLastNameValidation = (isValid) => {
         setValidation(prev => ({...prev, lastName: isValid}));
     }
 
-    const setEmail = (isValid) => {
+    const setEmailValidation = (isValid) => {
         setValidation(prev => ({...prev, email: isValid}));
 
     }
 
-    const setPhone = (isValid) => {
+    const setPhoneValidation = (isValid) => {
         setValidation(prev => ({...prev, phone: isValid}));
 
     }
 
-    const setAddress = (isValid) => {
+    const setAddressValidation = (isValid) => {
         setValidation(prev => ({...prev, address: isValid}));
 
     }
 
-    const setGender = (isValid) => {
+    const setGenderValidation = (isValid) => {
         setValidation(prev => ({...prev, gender: isValid}));
     }
 
-    const setCountry = (isValid) => {
+    const setCountryValidation = (isValid) => {
         setValidation(prev => ({...prev, country: isValid}));
     }
 
-    const setProgram = (isValid) => {
+    const setProgramValidation = (isValid) => {
         setValidation(prev => ({...prev, program: isValid}));
     }
 
@@ -66,7 +66,7 @@ const Apply = () => {
         setValidation(prev => ({...prev, birth: isValid}));
    }
 
-    const setPaymentMethod = (isValid) => {
+    const setPaymentMethodValidation = (isValid) => {
         setValidation(prev => ({...prev, paymentMethod: isValid}));
    }
 
@@ -89,21 +89,23 @@ const Apply = () => {
     const dateRef = useRef();
     const paymentMethodRef = useRef();
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     const validateField = (ref, setValidationFunc) => {
         setValidationFunc(ref.current.value.length > 0);
     }
 
     const validateInfo = () => {
-        validateField(firstNameRef, setFirstName);
-        validateField(lastNameRef, setLastName);
-        validateField(emailRef, setEmail);
-        validateField(phoneRef, setPhone);
-        validateField(addressRef, setAddress);
-        validateField(genderRef, setGender);
-        validateField(countryRef, setCountry);
-        validateField(programRef, setProgram);
+        validateField(firstNameRef, setFirstNameValidation);
+        validateField(lastNameRef, setLastNameValidation);
+        setEmailValidation(emailRegex.test(emailRef.current.value));
+        validateField(phoneRef, setPhoneValidation);
+        validateField(addressRef, setAddressValidation);
+        validateField(genderRef, setGenderValidation);
+        validateField(countryRef, setCountryValidation);
+        validateField(programRef, setProgramValidation);
         if(birthDate) setBirthDateValidation(true); else setBirthDateValidation(false);
-        validateField(paymentMethodRef, setPaymentMethod);
+        validateField(paymentMethodRef, setPaymentMethodValidation);
     }
 
     const handleSubmit = (e) => {
@@ -231,12 +233,14 @@ const Apply = () => {
 };
 
 const TextInputElement = ({type, elementRef, placeholder, isValid}) => {
+    let validationText = 'This field is required!';
+    if(type === 'email' && elementRef.current.value.length > 0) validationText = 'Please enter valid email address.';
     return (
         <div className="py-2">
             <div className="apply-form-input sm:w-[280px] rounded-md">
                 <input type={type} placeholder={placeholder} ref={elementRef} className="w-full h-12 outline-none text-black px-4 rounded-md" />
             </div>
-            {!isValid && <div className="text-red-500 text-sm px-4 pt-1">This field is required!</div>}
+            {!isValid && <div className="text-red-500 text-sm px-4 pt-1">{validationText}</div>}
         </div>
     )
 }
