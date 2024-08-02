@@ -210,7 +210,7 @@ const Apply = () => {
                     <div className="sm:flex flex-wrap justify-center sm:justify-between">
                         <div>
                             <div className="text-secondary text-sm px-4 pt-1">Birth of Date</div>
-                            <div className="apply-form-input text-black sm:w-[280px] rounded-md py-3">
+                            <div className="apply-form-input text-black sm:w-[280px] rounded-md pl-3 py-3">
                                 <DatePicker 
                                     onChange={handleDateChange} 
                                     value={birthDate}
