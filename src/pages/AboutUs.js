@@ -51,7 +51,7 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className="sm:px-20 mt-5 sm:mt-16">
-                <h4 className="text-primary text-2xl font-semibold">What Our Clients Say About US</h4>
+                <h4 className="text-primary text-2xl font-semibold">What Our Clients Say About Us</h4>
                 <h3 className="text-primary text-5xl font-semibold mt-3">Why not join us now</h3>
             </div>
             <ReviewCarousel />
