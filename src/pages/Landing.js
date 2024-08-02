@@ -214,8 +214,8 @@ export default function Landing() {
             <div className="max-w-[800px] m-auto px-5 py-20">
                 <iframe 
                     width="100%" 
-                    height="315" 
-                    src="https://youtu.be/Vv24lm9VvRA" 
+                    height="400" 
+                    src="https://www.youtube.com/embed/Vv24lm9VvRA" 
                     title="YouTube video player" 
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
