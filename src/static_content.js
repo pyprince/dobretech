@@ -177,7 +177,7 @@ export const landing = {
     certification_courses: [
         {
             title: 'Certification & Career Training',
-            text: `DobreTech in partnershit with the University of Buea provide IT certification and professional training courses which include Cloud, Security, Networking, AI, DevOpsSec providing valuable perspectives on the current IT & Telecommunications landscape and trends`,
+            text: `DobreTech in partnership with the University of Buea provide IT certification and professional training courses which include Cloud, Security, Networking, AI, DevOpsSec providing valuable perspectives on the current IT & Telecommunications landscape and trends`,
             image: 'get_id_card.png',
             link: '/'
         },
