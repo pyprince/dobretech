@@ -51,9 +51,8 @@ const AboutUs = () => {
                 </div>
             </div>
             <div className="sm:px-20 mt-5 sm:mt-16">
-                <h4 className="text-primary text-3xl font-semibold">What are Clients saying</h4>
-                <h3 className="text-primary text-5xl font-semibold">What are Clients saying</h3>
-                <p className="text-secondary text-xl py-5 max-w-[800px] leading-10">language learning experiences has stood the test of time, and our graduates have gone on to achieve remarkable success in their personal and professional lives.</p>
+                <h4 className="text-primary text-2xl font-semibold">What Our Clients Say About US</h4>
+                <h3 className="text-primary text-5xl font-semibold mt-3">Why not join us now</h3>
             </div>
             <ReviewCarousel />
             <div className="dobre-signify text-center text-white px-5 py-16">
@@ -71,7 +70,7 @@ const AboutUs = () => {
             </div>
             <div className="text-center mt-6 sm:mt-20 max-w-[1200px] mx-auto">
                 <h5 className="text-primary text-2xl sm:text-3xl font-semibold py-2">Welcome To DobreTech</h5>
-                <h4 className="text-primary text-3xl sm:text-5xl font-semibold py-4">New Experience Learn to the Next Level  Your Career</h4>
+                <h4 className="text-primary text-3xl sm:text-5xl font-semibold py-4">New Experience! Learn to the Next Level</h4>
                 <p className="text-secondary text-xl leading-10 max-w-[800px] mx-auto">
                     Were we turn every class into an engaging, practical and networking journey
                     where our students learn theory, indepth concepts and perform hands-on practice in real-world scenarios.
