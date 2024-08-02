@@ -41,17 +41,17 @@ const Modal = ({ isOpen, onClose }) => {
                 <form onSubmit={handleSubmit} className='mt-5'>
                     <div className='flex justify-center gap-[3%]'>
                         <div className='w-[30%]'>
-                            <img src='../images/icons/modal_address.svg' alt='address icon' className='mx-auto w-[30%]' />
+                            <img src='/images/icons/modal_address.svg' alt='address icon' className='mx-auto w-[30%]' />
                             <h6 className='text-sm sm:text-2xl text-primary text-center font-semibold'>Address</h6>
                             <p className='text-[10px] sm:text-[12px] text-secondary text-center'>University of Buea - IT Center, Main Campus Molyko Buea - Cameroon.</p>
                         </div>
                         <div className='w-[30%]'>
-                            <img src='../images/icons/modal_email.svg' alt='address icon' className='mx-auto w-[30%]' />
+                            <img src='/images/icons/modal_email.svg' alt='address icon' className='mx-auto w-[30%]' />
                             <h6 className='text-sm sm:text-2xl text-primary text-center font-semibold'>Email Address</h6>
                             <p className='text-[10px] sm:text-[12px] text-secondary text-center'>info@dobretech.com</p>
                         </div>
                         <div className='w-[30%]'>
-                            <img src='../images/icons/modal_phone.svg' alt='address icon' className='mx-auto w-[30%]' />
+                            <img src='/images/icons/modal_phone.svg' alt='address icon' className='mx-auto w-[30%]' />
                             <h6 className='text-sm sm:text-2xl text-primary text-center font-semibold'>Contact</h6>
                             <p className='text-[10px] sm:text-[12px] text-secondary text-center'>+237 671163568 / 682498299 / 696948590</p>
                         </div>

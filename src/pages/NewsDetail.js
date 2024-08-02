@@ -37,16 +37,16 @@ const AuthorInfoCard = ({name, avatar, description, links}) => {
             </div>
             <div className="flex gap-3 py-3 mx-auto lg:mx-0">
                 <Link to={links.facebook} target="_BLANK" className="">
-                    <img src="../images/icons/facebook_primary.svg" alt="facebook" className="" />
+                    <img src="/images/icons/facebook_primary.svg" alt="facebook" className="" />
                 </Link>
                 <Link to={links.twitter} target="_BLANK" className="">
-                    <img src="../images/icons/twitter_primary.svg" alt="twitter" className="" />
+                    <img src="/images/icons/twitter_primary.svg" alt="twitter" className="" />
                 </Link>
                 <Link to={links.linkedin} target="_BLANK" className="">
-                    <img src="../images/icons/linkedin_primary.svg" alt="linkedin" className="" />
+                    <img src="/images/icons/linkedin_primary.svg" alt="linkedin" className="" />
                 </Link>
                 <Link to={links.pinterest} target="_BLANK" className="">
-                    <img src="../images/icons/pinterest_primary.svg" alt="pinterest" className="" />
+                    <img src="/images/icons/pinterest_primary.svg" alt="pinterest" className="" />
                 </Link>
             </div>
         </div>
@@ -76,7 +76,7 @@ const OtherNews = ({id, title, image, date}) => {
                     </Link>
                 </h6>
                 <div className="flex gap-3 mt-auto">
-                    <img src="../images/icons/calender.svg" alt="calender" className="w-4" />
+                    <img src="/images/icons/calender.svg" alt="calender" className="w-4" />
                     <span className="text-tomato text-sm">{date}</span>
                 </div>
             </div>

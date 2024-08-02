@@ -30,7 +30,7 @@ const Header = () => {
         <div className='bg-[#001D44] flex px-3 py-1 sm:pl-10 md:pr-16 sm:py-3 items-center justify-between'>
             <div className='flex items-center'>
                 <Link to='/' className='w-[75px]'>
-                    <img src='../images/logox75.png' alt='logo' />
+                    <img src='/images/logox75.png' alt='logo' />
                 </Link>
                 <div className='hidden sm:flex sm:gap-5 lg:gap-10 font-semibold sm:ml-5 md:ml-10 lg:ml-20'>
                     {header.map((link, i) => (
@@ -43,11 +43,11 @@ const Header = () => {
                     info@dobretech.com | +237 652632299 | Mon -Sat 8.00 - 18.00
                 </div> */}
                 <Link to='/news' className='w-[20px]'>
-                    <img src='../images/icons/notification.svg' alt='notification' className='w-full' />
+                    <img src='/images/icons/notification.svg' alt='notification' className='w-full' />
                 </Link>
                 <button className='hidden sm:block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => navigate('/apply')}>Apply now</button>
                 <button className='sm:hidden button text-white ml-2 w-[25px]' onClick={handleMenuClick}>
-                    <img src='../images/icons/menu.svg' className='w-full h-full' alt='menu' />
+                    <img src='/images/icons/menu.svg' className='w-full h-full' alt='menu' />
                 </button>
                 {open && <div className='dropdown-menu bg-[#001D44] p-5 rounded-2xl z-10' ref={dropdownRef}>
                     <div className='py-2 font-semibold'>

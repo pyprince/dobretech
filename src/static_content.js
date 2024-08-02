@@ -808,7 +808,8 @@ export const events = [
         end_time: '17:00',
         start_date: 'March 24, 2024',
         end_date: 'March 25, 2024',
-        participants: 200
+        participants: 200,
+        link: 'https://www.africatechsummit.com/nairobi/',
     },
     {
         title: 'Africa Tech Summit Nairobi 2024',
@@ -821,7 +822,8 @@ export const events = [
         end_time: '17:00',
         start_date: 'March 24, 2024',
         end_date: 'March 25, 2024',
-        participants: 200
+        participants: 200,
+        link: 'https://www.africatechsummit.com/nairobi/',
     },
     {
         title: 'Digital Transformation Congress 2024',
@@ -834,7 +836,8 @@ export const events = [
         end_time: '17:00',
         start_date: 'March 24, 2024',
         end_date: 'March 25, 2024',
-        participants: 200
+        participants: 200,
+        link: 'https://www.africatechsummit.com/nairobi/',
     },
     {
         title: 'Africa Tech Festival 2024',
@@ -847,7 +850,8 @@ export const events = [
         end_time: '17:00',
         start_date: 'March 24, 2024',
         end_date: 'March 25, 2024',
-        participants: 200
+        participants: 200,
+        link: 'https://www.africatechsummit.com/nairobi/',
     },
     {
         title: 'International Exhibition for Enterprises SMEs and Partnerships of Yaounde',
@@ -860,7 +864,8 @@ export const events = [
         end_time: '17:00',
         start_date: 'March 24, 2024',
         end_date: 'March 25, 2024',
-        participants: 200
+        participants: 200,
+        link: 'https://www.africatechsummit.com/nairobi/',
     },
     {
         title: 'UB - DobreTech Opening Ceremony',
@@ -873,7 +878,8 @@ export const events = [
         end_time: '17:00',
         start_date: 'March 24, 2024',
         end_date: 'March 25, 2024',
-        participants: 200
+        participants: 200,
+        link: 'https://www.africatechsummit.com/nairobi/',
     },
 ]
 

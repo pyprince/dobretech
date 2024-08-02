@@ -13,7 +13,7 @@ const Footer = () => {
                     {
                         footer.partners.map((partner, i) => (
                             <Link to={partner.link} target='_BLANK' key={i}>
-                                <img src={`../images/${partner.logo}`} alt={partner.name} className='w-[170px] h-[82px]' />
+                                <img src={`/images/${partner.logo}`} alt={partner.name} className='w-[170px] h-[82px]' />
                             </Link>
                         ))
                     }
@@ -22,7 +22,7 @@ const Footer = () => {
             <div className='flex flex-col lg:flex-row mb-5'>
                 <div className='order-2 flex justify-center items-center gap-5 w-auto lg:w-[335px] mx-auto lg:order-1 lg:block p-5 text-justify'>
                     <div className='w-[100px]'>
-                        <img src='../images/footer_logo.png' alt='Footer Logo' />
+                        <img src='/images/footer_logo.png' alt='Footer Logo' />
                     </div>
                     <div className='text-gray-300 w-[180px] sm:w-[300px]'>
                         {footer.footer_introduction}
@@ -42,16 +42,16 @@ const Footer = () => {
                         </div>
                         <div className='gap-2 py-5 hidden sm:flex'>
                             <Link to='https://web.facebook.com/people/Dobre-Technologies/100067183329468/' target='_BLANK'>
-                                <img src='../images/icons/facebook.svg' alt='Facebook' />
+                                <img src='/images/icons/facebook.svg' alt='Facebook' />
                             </Link>
                             <Link to='https://twitter.com/DobreTechnolog1/' target='_BLANK'>
-                                <img src='../images/icons/twitter.svg' alt='X' />
+                                <img src='/images/icons/twitter.svg' alt='X' />
                             </Link>
                             <Link to='https://linkedin.com/company/dobretech/' target='_BLANK'>
-                                <img src='../images/icons/linkedin.svg' alt='LinkedIn' />
+                                <img src='/images/icons/linkedin.svg' alt='LinkedIn' />
                             </Link>
                             <Link to='https://www.instagram.com/dobretech/' target='_BLANK'>
-                                <img src='../images/icons/instagram.svg' alt='Instagram' />
+                                <img src='/images/icons/instagram.svg' alt='Instagram' />
                             </Link>
                         </div>
                     </div>
@@ -76,16 +76,16 @@ const Footer = () => {
             </div>
             <div className='gap-2 py-5 flex justify-center sm:hidden'>
                 <Link to='https://web.facebook.com/people/Dobre-Technologies/100067183329468/' target='_BLANK'>
-                    <img src='../images/icons/facebook.svg' alt='Facebook' />
+                    <img src='/images/icons/facebook.svg' alt='Facebook' />
                 </Link>
                 <Link to='https://twitter.com/DobreTechnolog1/' target='_BLANK'>
-                    <img src='../images/icons/twitter.svg' alt='X' />
+                    <img src='/images/icons/twitter.svg' alt='X' />
                 </Link>
                 <Link to='https://linkedin.com/company/dobretech/' target='_BLANK'>
-                    <img src='../images/icons/linkedin.svg' alt='LinkedIn' />
+                    <img src='/images/icons/linkedin.svg' alt='LinkedIn' />
                 </Link>
                 <Link to='https://www.instagram.com/dobretech/' target='_BLANK'>
-                    <img src='../images/icons/instagram.svg' alt='Instagram' />
+                    <img src='/images/icons/instagram.svg' alt='Instagram' />
                 </Link>
             </div>
             <div className='flex flex-col sm:flex-row justify-between py-3 border-t border-gray-300'>

@@ -211,12 +211,12 @@ const Apply = () => {
                     </div>
                     <div className="flex flex-wrap justify-center mt-10 gap-2">
                         <div className="w-[200px] py-6">
-                            <img src="../images/icons/apply_ub.svg" alt="UB IT" className="mx-auto" />
+                            <img src="/images/icons/apply_ub.svg" alt="UB IT" className="mx-auto" />
                             <h5 className="text-primary text-center font-semibold mt-8">UB IT Career Training</h5>
                             <p className="text-secondary text-center">This training is done in partnership with the University of Buea.</p>
                         </div>
                         <div className="w-[240px] py-6">
-                            <img src="../images/icons/apply_certification.svg" alt="Certification" className="mx-auto" />
+                            <img src="/images/icons/apply_certification.svg" alt="Certification" className="mx-auto" />
                             <h5 className="text-primary text-center font-semibold mt-8">Certification Training</h5>
                             <p className="text-secondary text-center">Gain mastering and proficiency</p>
                         </div>

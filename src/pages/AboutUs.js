@@ -6,7 +6,7 @@ import { aboutus } from "../static_content";
 const AboutInfo = ({title, icon, text}) => {
     return (
         <div className="flex items-center gap-5 py-5">
-            <img src={`../images/icons/${icon}.svg`} alt={title} className="w-24" />
+            <img src={`/images/icons/${icon}.svg`} alt={title} className="w-24" />
             <div className="">
                 <h4 className="text-primary text-2xl font-semibold">{title}</h4>
                 <p className="text-secondary">{text}</p>
@@ -17,7 +17,7 @@ const AboutInfo = ({title, icon, text}) => {
 
 const ELearning = ({icon, text}) => (
     <div className="flex items-center py-5 gap-10">
-        <img src={`../images/icons/${icon}.svg`} alt={icon} />
+        <img src={`/images/icons/${icon}.svg`} alt={icon} />
         <p className="text-xl text-secondary">{text}</p>
     </div>
 )
@@ -34,13 +34,13 @@ const AboutUs = () => {
                         <AboutInfo title={info.title} icon={info.icon} text={info.text} key={i} />
                     ))}
                 </div>
-                <img src="../images/aboutus.png" alt="About Us" className="w-[600px]" />
+                <img src="/images/aboutus.png" alt="About Us" className="w-[600px]" />
             </div>
             <div className="flex flex-wrap justify-center items-center gap-8 mt-20">
                 <div className="w-[600px]">
                     <h2 className="text-5xl text-center text-primary font-semibold">Find More About Us E-Learning Experience</h2>
                     <p className="text-secondary text-center text-xl py -2">Why Choose Us</p>
-                    <img src="../images/aboutus_elearning.png" alt="About us learning" className="" />
+                    <img src="/images/aboutus_elearning.png" alt="About us learning" className="" />
                 </div>
                 <div className="">
                     {
@@ -77,22 +77,22 @@ const AboutUs = () => {
                 </p>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-20 my-20">
-                <img src="../images/aboutus_career.png" alt="Career" className="w-[600px]" />
+                <img src="/images/aboutus_career.png" alt="Career" className="w-[600px]" />
                 <div className="text-xl">
                     <div className="flex items-center gap-3 text-secondary py-3">
-                        <img src="../images/icons/dot.svg" alt="dot" />
+                        <img src="/images/icons/dot.svg" alt="dot" />
                         <span>The foundation for a lifetime of success</span>
                     </div>
                     <div className="flex items-center gap-3 text-secondary py-3">
-                        <img src="../images/icons/dot.svg" alt="dot" />
+                        <img src="/images/icons/dot.svg" alt="dot" />
                         <span>Find the right instructor for you</span>
                     </div>
                     <div className="flex items-center gap-3 text-secondary py-3">
-                        <img src="../images/icons/dot.svg" alt="dot" />
+                        <img src="/images/icons/dot.svg" alt="dot" />
                         <span>Popular topics to learn now</span>
                     </div>
                     <div className="flex items-center gap-2 py-5">
-                        <img src="../images/icons/user.svg" alt="user" className="w-20" />
+                        <img src="/images/icons/user.svg" alt="user" className="w-20" />
                         <div>
                             <h5 className="text-2xl text-primary">Mark Andersson</h5>
                             <p className=" text-secondary">Project Manager</p>

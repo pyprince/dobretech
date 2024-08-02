@@ -11,12 +11,12 @@ const Courses = () => {
             <div className="flex flex-col md:flex-row justify-center items-center mt-5 sm:mt-20 px-5 py-3 gap-16">
                 <div className="flex justify-center gap-8">
                     <div className="text-center w-[140px]">
-                        <img src="../images/icons/community_calender.svg" className="w-24 mx-auto" alt="start date" />
+                        <img src="/images/icons/community_calender.svg" className="w-24 mx-auto" alt="start date" />
                         <h5 className="text-2xl text-primary font-semibold">Start Date</h5>
                         <p className="text-secondary">April 1st, 2024</p>
                     </div>
                     <div className="text-center w-[140px]">
-                        <img src="../images/icons/community_network.svg" className="w-24 mx-auto" alt="start date" />
+                        <img src="/images/icons/community_network.svg" className="w-24 mx-auto" alt="start date" />
                         <h5 className="text-2xl text-primary font-semibold">Start Date</h5>
                         <p className="text-secondary">April 1st, 2024</p>
                     </div>
@@ -208,7 +208,7 @@ const Courses = () => {
                 {/* end */}
             </div>
             <div className="my-20">
-                {course_type === 'ub-program' ? <img src="../images/community_mark.png" alt="mark" className="mx-auto" /> : (course_type === 'cybersecurity' ? <img src="../images/cybersecurity.webp" alt="mark" className="mx-auto" /> : <img src="../images/cloud-computing.webp" alt="mark" className="mx-auto" />)}
+                {course_type === 'ub-program' ? <img src="/images/community_mark.png" alt="mark" className="mx-auto" /> : (course_type === 'cybersecurity' ? <img src="/images/cybersecurity.webp" alt="mark" className="mx-auto" /> : <img src="/images/cloud-computing.webp" alt="mark" className="mx-auto" />)}
             </div>
         </div>
     )

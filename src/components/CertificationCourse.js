@@ -13,7 +13,7 @@ const CertificationCourse = ({title, image, link, text, reversed=false}) => (
             </p>
         </div>
         <div className={`w-full md:w-[40%]`}>
-            <img src={`../images/${image}`} alt="Get ID card" className="w-full" />
+            <img src={`/images/${image}`} alt="Get ID card" className="w-full" />
         </div>
     </div>
 );

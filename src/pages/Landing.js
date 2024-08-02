@@ -31,7 +31,7 @@ export default function Landing() {
                     <CarouselSlide3 />
                     <CarouselSlide4 />
                 </Carousel>
-                <img src="../images/icons/chat.svg"  className="absolute bottom-[5%] right-[3%] w-[30px] sm:w-auto z-10 cursor-pointer" onClick={openModal} alt="chat icon" />
+                <img src="/images/icons/chat.svg"  className="absolute bottom-[5%] right-[3%] w-[30px] sm:w-auto z-10 cursor-pointer" onClick={openModal} alt="chat icon" />
             </div>
             <Modal isOpen={isModalOpen} onClose={closeModal} />
             {/* Course List */}
@@ -39,7 +39,7 @@ export default function Landing() {
                 <div className="flex flex-col sm:flex-row justify-center text-white">
                     <div className="text-center p-5 sm:w-[33.3%]">
                         <div className="py-5">
-                            <img src="../images/icons/cloud.svg" className="mx-auto" alt="cloud" />
+                            <img src="/images/icons/cloud.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
                             <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>Cloud Computing</span>
@@ -47,10 +47,10 @@ export default function Landing() {
                         <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
-                    <img src="../images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
+                    <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
                     <div className="text-center p-5 sm:w-[33.3%]">
                         <div className="py-5">
-                            <img src="../images/icons/whitehat_hacker.svg" className="mx-auto" alt="cloud" />
+                            <img src="/images/icons/whitehat_hacker.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
                             <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Cybersecurity</span>
@@ -58,10 +58,10 @@ export default function Landing() {
                         <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
-                    <img src="../images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
+                    <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
                     <div className="text-center p-5 sm:w-[33.3%]">
                         <div className="py-5">
-                            <img src="../images/icons/ub_program.svg" className="mx-auto" alt="cloud" />
+                            <img src="/images/icons/ub_program.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1">
                             <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/ub-program')}}>UB Program</span>
@@ -83,7 +83,7 @@ export default function Landing() {
                     landing.features.map((feature, i) => (
                         <div className="landing-dobretech-feature text-center w-[300px] px-3 py-8 m-2 rounded-lg" key={i}>
                             <div className="py-2">
-                                <img src={`../images/icons/${feature.icon}`} alt={feature.title} className="mx-auto" />
+                                <img src={`/images/icons/${feature.icon}`} alt={feature.title} className="mx-auto" />
                             </div>
                             <h4 className="text-xl font-semibold py-2">{feature.title}</h4>
                             <p className="py-2 mb-5">{feature.content}</p>
@@ -103,16 +103,16 @@ export default function Landing() {
                                 landing.upcoming_events.events.map((event, i) => (
                                     <div className="py-2" key={i}>
                                         <div className="flex items-center gap-2 py-2">
-                                            <img src="../images/icons/star.svg" alt="title of event" />
+                                            <img src="/images/icons/star.svg" alt="title of event" />
                                             <p className="">{event.title}</p>
                                         </div>
                                         <div className="text-xs font-thin flex items-center gap-5">
                                             <div className="flex items-center gap-2">
-                                                <img src="../images/icons/clock.svg" alt="time" className="w-3" />
+                                                <img src="/images/icons/clock.svg" alt="time" className="w-3" />
                                                 <div>{event.time}</div>
                                             </div>
                                             <div className="flex items-center gap-2">
-                                                <img src="../images/icons/position.svg" alt="type" className="w-3" />
+                                                <img src="/images/icons/position.svg" alt="type" className="w-3" />
                                                 <div>{event.type}</div>
                                             </div>
                                         </div>
@@ -123,8 +123,8 @@ export default function Landing() {
                         <div className="mt-10 relative z-10">
                             <Link to='/community' className="bg-white sm:text-xl text-primary rounded-md px-4 sm:px-6 py-3 hover:bg-primary hover:text-white">View full Events</Link>
                         </div>
-                        <img src="../images/upcoming_events_vector.png" alt="vector" className="absolute left-0 bottom-0" />
-                        <img src="../images/upcoming_events_character.png" alt="Event woman" className="static block ml-auto mt-[-80px] lg:absolute bottom-0 right-[-50px] z-0" />
+                        <img src="/images/upcoming_events_vector.png" alt="vector" className="absolute left-0 bottom-0" />
+                        <img src="/images/upcoming_events_character.png" alt="Event woman" className="static block ml-auto mt-[-80px] lg:absolute bottom-0 right-[-50px] z-0" />
                     </div>
                 </div>
             </div>
@@ -132,7 +132,7 @@ export default function Landing() {
             <div className="flex justify-center text-3xl sm:text-4xl font-semibold sm:mt-16 py-8">
                 <div className="">
                     Certification Courses
-                    {/* <img src="../images/icons/curved_line.svg" alt="saucy curved line" className="w-[60%] ml-[40%] sm:ml-[60%] sm:w-auto" /> */}
+                    {/* <img src="/images/icons/curved_line.svg" alt="saucy curved line" className="w-[60%] ml-[40%] sm:ml-[60%] sm:w-auto" /> */}
                 </div>
             </div>
             {landing.certification_courses.map((course, i) => {
@@ -157,7 +157,7 @@ export default function Landing() {
             <div className="px-6 md:px-20 py-8">
                 <div className="flex flex-wrap rounded-[30px] max-w-[1500px] mx-auto landing-activities">
                     <div className="w-full lg:w-[40%]">
-                        <img src="../images/work_activities.png" alt="working man" className="rounded-tl-[30px] rounded-tr-[30px] lg:rounded-tr-none lg:rounded-bl-[30px] w-full h-full" />
+                        <img src="/images/work_activities.png" alt="working man" className="rounded-tl-[30px] rounded-tr-[30px] lg:rounded-tr-none lg:rounded-bl-[30px] w-full h-full" />
                     </div>
                     <div className="w-full lg:w-[60%] pl-12 py-12">
                         <h2 className="text-2xl sm:text-4xl font-semibold pr-12">
@@ -169,21 +169,21 @@ export default function Landing() {
                         <div className="flex py-6 gap-5">
                             <div className="w-[40%] lg:w-[50%] xl:w-[40%]">
                                 <div className="flex items-center gap-2">
-                                    <img src="../images/icons/confirmed.svg" alt="confirmed" />
+                                    <img src="/images/icons/confirmed.svg" alt="confirmed" />
                                     <p className="text-secondary">Reliable and the best</p>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <img src="../images/icons/confirmed.svg" alt="confirmed" />
+                                    <img src="/images/icons/confirmed.svg" alt="confirmed" />
                                     <p className="text-secondary">Onsite/classroom/offline delivery modes</p>
                                 </div>
                             </div>
                             <div className="w-[40%]">
                                 <div className="flex items-center gap-2">
-                                    <img src="../images/icons/confirmed.svg" alt="confirmed" />
+                                    <img src="/images/icons/confirmed.svg" alt="confirmed" />
                                     <p className="text-secondary">Expert tutor</p>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <img src="../images/icons/confirmed.svg" alt="confirmed" />
+                                    <img src="/images/icons/confirmed.svg" alt="confirmed" />
                                     <p className="text-secondary">Affordable</p>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@ export default function Landing() {
             {/* latest news */}
             <div className="flex justify-center text-4xl font-semibold mt-12">
                 <div>
-                    {/* <img src="../images/icons/curved_line_reversed.svg" alt="saucy curve" className="ml-[-40%] sm:ml-[-50%] mb-1" /> */}
+                    {/* <img src="/images/icons/curved_line_reversed.svg" alt="saucy curve" className="ml-[-40%] sm:ml-[-50%] mb-1" /> */}
                     Latest News
                 </div>
             </div>
@@ -212,13 +212,13 @@ export default function Landing() {
             </div>
             {/* video */}
             <div className="flex justify-center px-10 py-12 mt-20">
-                <img src="../images/video.png" alt="video" />
+                <img src="/images/video.png" alt="video" />
             </div>
             {/* review */}
             <div className="flex justify-center text-4xl font-semibold py-1">
                 <div className="text-center relative">
                     What Our <span className="text-tomato">Students</span> Says About
-                    {/* <img src="../images/icons/curved_line.svg" alt="saucy curved" className="absolute right-0" /> */}
+                    {/* <img src="/images/icons/curved_line.svg" alt="saucy curved" className="absolute right-0" /> */}
                 </div>
             </div>
             <ReviewCarousel />
