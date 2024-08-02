@@ -64,13 +64,13 @@ const Footer = () => {
                             ))}
                         </div>
                         <div className='text-center sm:text-left'>{footer.information.email_address}</div>
-                        <div className='pt-6 flex'>
+                        {/* <div className='pt-6 flex'>
                             <input type='email' 
                               className='border border-[#26FFDA] rounded-tl-sm rounded-bl-sm bg-[#3395a6] outline-none pl-4 py-3 text-xs placeholder:text-white w-[200px]'
                               placeholder='Enter email address*'
                             />
                             <button className='bg-[#26FFDA] text-primary font-bold w-[100px] rounded-tr-sm rounded-br-sm active:text-tomato'>Subscribe</button>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -90,10 +90,10 @@ const Footer = () => {
             </div>
             <div className='flex flex-col sm:flex-row justify-between py-3 border-t border-gray-300'>
                 <div className='text-gray-300 font-xl pb-2'>&copy;Copyright DobreTech 2024.</div>
-                <div>
+                {/* <div>
                     <Link to='privacypolicy' className='text-white mr-2 hover:text-tomato sm:mr-5'>Privacy Policy</Link>
                     <Link to='termsandconditions' className='text-white hover:text-tomato'>Terms & Conditions</Link>
-                </div>
+                </div> */}
             </div>
         </footer>
     );

@@ -73,10 +73,10 @@ export const footer = {
             title: 'Apply Now',
             path: '/apply'
         },
-        // {
-        //     title: 'Intro to IT',
-        //     path: '/intro'
-        // },
+        {
+            title: 'Career',
+            path: '/'
+        },
         // {
         //     title: 'FAQs',
         //     path: '/faqs'
