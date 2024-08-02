@@ -164,7 +164,7 @@ export default function Landing() {
                             Learn About Our Work & Cultural <span className="text-tomato">Activities</span>
                         </h2>
                         <p className="mt-10 pr-8">
-                            Our vision is to build a highly competitive and effective training provider that will become the number one choice for both individuals and corporate organizations in Cameroon, Africa and to the Globe. We will explain everything you are interested. Join our new session. If you have any feel free to contact us.
+                            Our vision is to build a highly competitive and effective training provider that will become the number one choice for both individuals and corporate organizations in Cameroon, Africa and to the Globe. Join our new session. If you have any feel free to contact us.
                         </p>
                         <div className="flex py-6 gap-5">
                             <div className="w-[40%] lg:w-[50%] xl:w-[40%]">

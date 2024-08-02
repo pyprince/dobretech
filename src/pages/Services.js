@@ -21,7 +21,7 @@ const Services = () => {
                 <div className="services-info-card flex flex-col sm:flex-row justify-center sm:justify-between items-center text-center sm:text-left p-10  gap-10 xl:gap-20 rounded-3xl">
                     <div className="w-64">
                         <h5 className="text-2xl text-primary font-semibold">Valuable</h5>
-                        <p className="text-secondary leading-8 mt-5">Following each interaction, let us know what you thought. Your feedback helps improve your future introductions.</p>
+                        <p className="text-secondary leading-8 mt-5">Following each interaction, let us know what you think. Your feedback helps improve your future introductions.</p>
                     </div>
                     <img src="/images/icons/services_info_valuable.svg" alt="valuable" className="w-[120px] lg:w-auto" />
                 </div>
