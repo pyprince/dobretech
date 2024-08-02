@@ -1,5 +1,6 @@
 import React, {useState, useRef} from "react";
 import DatePicker from "react-date-picker";
+import { toast } from "react-toastify";
 import countries from "../countries";
 
 import 'react-date-picker/dist/DatePicker.css';
@@ -26,6 +27,7 @@ const Apply = () => {
         paymentMethod: true
     });
     const [birthDate, setBirthDate] = useState('');
+    const [isLoading, setLoading] = useState(false);
 
     const setFirstNameValidation = (isValid) => {
         setValidation(prev => ({ ...prev, firstName: isValid }));
@@ -136,22 +138,53 @@ const Apply = () => {
         if(!payment_method) flag = false;
         
         validateInfo();
-        if (flag) {
-            // Proceed with form submission
+        
+        if (flag && payment_method === 'Moon Pay') {
             const applyData = {
-                firstName: firstNameRef.current.value,
-                lastName: lastNameRef.current.value,
-                email: emailRef.current.value,
-                phone: phoneRef.current.value,
+                firstName,
+                lastName,
+                email,
+                phone,
                 birth: birthDate,
-                address: addressRef.current.value,
-                gender: genderRef.current.value,
-                country: countryRef.current.value,
-                program: programRef.current.value,
-                date: dateRef.current.value,
-                payment_method: paymentMethodRef.current.value
+                address,
+                gender,
+                country,
+                program,
+                date,
+                payment_method
             }
-            console.log('Application sent!', applyData);
+
+            setLoading(true);
+            fetch('https://dobretech-server-9377d560ca1c.herokuapp.com/send_emails', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(applyData)
+            })
+            .then(response => {
+                if(!response.ok) {
+                    toast.error("Sorry, Something went wrong. Please try again later.");
+                    throw new Error('Error!');
+                }
+                return response.json();
+            })
+            .then(data => {
+                setLoading(false);
+                toast.success("You are successfully applied.");
+                setTimeout(() => window.location.href = 'http://64.23.179.182/send-money', 500);
+
+            })
+            .catch(err => {
+                setLoading(false);
+                toast.error("Sorry, Something went wrong. Please try again later.");
+                console.error("Error: ", err);
+            });
+
+            // console.log('Application sent!', applyData);
+        }
+        else if(flag && (payment_method === 'Paypal' || payment_method === 'Stripe')) {
+            toast.warning("Paypal or Stripe are not supported yet.");
         }
         else {
             // Alert or push notification
@@ -203,7 +236,10 @@ const Apply = () => {
                         <SelectElement values={payment_methods} placeholder='Select Registration Fee Payment Methods' elementRef={paymentMethodRef} isValid={validation.paymentMethod} width={'100%'} />
                     </div>
                     <div className="mt-8 self-center">
-                        <button className="bg-primary text-white font-semibold rounded-md px-20 py-2 active:text-tomato" onClick={(e) => handleSubmit(e)}>Apply</button>
+                        <button className="bg-primary relative text-white font-semibold rounded-md px-20 py-2 active:text-tomato" onClick={(e) => handleSubmit(e)}>
+                            Apply
+                            {isLoading && <div class="loader inline-block absolute ml-2 mt-[2px]"></div>}
+                        </button>
                     </div>
                 </form>
                 <div className="max-w-[480px]">
@@ -224,7 +260,7 @@ const Apply = () => {
                         </div>
                     </div>
                     <div className="text-center mt-6">
-                        {/* <button className="bg-tomato text-white mx-auto px-10 py-2 rounded-md active:text-primary" onClick={() => {}}>Download Admission Steps</button> */}
+                        <button className="bg-tomato text-white mx-auto px-10 py-2 rounded-md active:text-primary" onClick={() => {}}>Download Admission Steps</button>
                     </div>
                 </div>
             </div>

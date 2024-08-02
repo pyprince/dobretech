@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Modal = ({ isOpen, onClose }) => {
     const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ const Modal = ({ isOpen, onClose }) => {
         email: '',
         message: '',
     });
+
+    const [isLoading, setLoading] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -19,8 +22,31 @@ const Modal = ({ isOpen, onClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form Data:', formData);
+        setLoading(true);
         // You can add further logic here (e.g., API calls)
-        onClose(); // Close the modal after submission
+        fetch('https://dobretech-server-9377d560ca1c.herokuapp.com/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => {
+                if(!response.ok) {
+                    throw new Error('Error!');
+                }
+                return response.json();
+            })
+            .then(data => {
+                setLoading(false);
+                toast.success("Your message is successfully sent.");
+                onClose();
+            })
+            .catch(err => {
+                setLoading(false);
+                toast.error("Sorry, Something went wrong. Please try again later.");
+                console.error("Error: ", err);
+            });
     };
 
     if (!isOpen) return null; // Don't render the modal if it's not open
@@ -102,7 +128,11 @@ const Modal = ({ isOpen, onClose }) => {
                         />
                     </div>
                     <div className='text-center mt-8'>
-                        <button type="submit" className='bg-tomato text-white px-12 py-1 rounded-md'>SUBMIT</button>
+                        <button type="submit" className='bg-tomato relative text-white px-12 py-1 rounded-md'>
+                            <span>SUBMIT</span>
+                            {isLoading && <div className="loader inline-block absolute ml-2 mt-[1px]"></div>}
+                        </button>
+                        
                     </div>
                 </form>
             </div>

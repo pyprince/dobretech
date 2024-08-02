@@ -54,7 +54,7 @@ const EventDetail = () => {
                         </div>
                         <div className="flex items-center gap-4 py-2">
                             <img src="/images/icons/events_content_link.svg" alt="link" className="w-6" />
-                            <p className="text-[#00B2FF]"><Link to={event.link} target="_BLANK">{event.link}</Link></p>
+                            <p className="text-[#00B2FF]" style={{wordBreak: 'break-all'}}><Link to={event.link} target="_BLANK">{event.link}</Link></p>
                         </div>
                     </div>
                 </div>

@@ -42,7 +42,7 @@ export default function Landing() {
                             <img src="/images/icons/cloud.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
-                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>Cloud Computing</span>
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>Cloud Computing</span>
                         </div>
                         <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
@@ -53,7 +53,7 @@ export default function Landing() {
                             <img src="/images/icons/whitehat_hacker.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
-                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Cybersecurity</span>
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Cybersecurity</span>
                         </div>
                         <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
@@ -64,7 +64,7 @@ export default function Landing() {
                             <img src="/images/icons/ub_program.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1">
-                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/ub-program')}}>UB Program</span>
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/ub-program')}}>UB Program</span>
                         </div>
                         <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
@@ -211,8 +211,16 @@ export default function Landing() {
                 ))}
             </div>
             {/* video */}
-            <div className="flex justify-center px-10 py-12 mt-20">
-                <img src="/images/video.png" alt="video" />
+            <div className="max-w-[800px] m-auto px-5 py-20">
+                <iframe 
+                    width="100%" 
+                    height="315" 
+                    src="https://youtu.be/Vv24lm9VvRA" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
             </div>
             {/* review */}
             <div className="flex justify-center text-4xl font-semibold py-1">

@@ -39,9 +39,9 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex items-center gap-5'>
-                {/* <div className='text-sm'>
-                    info@dobretech.com | +237 652632299 | Mon -Sat 8.00 - 18.00
-                </div> */}
+                <div className='text-sm hidden xl:block'>
+                    info@dobretech.com | +237 652632299 
+                </div>
                 <Link to='/news' className='w-[20px]'>
                     <img src='/images/icons/notification.svg' alt='notification' className='w-full' />
                 </Link>
