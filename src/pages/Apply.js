@@ -46,10 +46,6 @@ const Apply = () => {
 
     }
 
-    const setBirth = (isValid) => {
-        setValidation(prev => ({...prev, birth: isValid}));
-    }
-
     const setAddress = (isValid) => {
         setValidation(prev => ({...prev, address: isValid}));
 

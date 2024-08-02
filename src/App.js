@@ -15,6 +15,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import './App.css';
+import Courses from './pages/Courses';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route exact path='/news' element={<News />} />
           <Route exact path='/news/:id' element={<NewsDetail />} />
           <Route exact path='/community' element={<Community />} />
+          <Route exact path='/courses/:course_type' element={<Courses />} />
           <Route exact path='/training' element={<Dummy />} />
           <Route exact path='/faqs' element={<Dummy />} />
           <Route exact path='/intro' element={<Dummy />} />

@@ -42,7 +42,7 @@ export default function Landing() {
                             <img src="../images/icons/cloud.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
-                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>Cloud Computing</span>
+                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>Cloud Computing</span>
                         </div>
                         <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
@@ -53,7 +53,7 @@ export default function Landing() {
                             <img src="../images/icons/whitehat_hacker.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
-                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>Cybersecurity</span>
+                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Cybersecurity</span>
                         </div>
                         <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
@@ -64,7 +64,7 @@ export default function Landing() {
                             <img src="../images/icons/ub_program.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1">
-                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/')}}>UB Program</span>
+                            <span className="cursor-pointer hover:font-semibold" onClick={() => {navigate('/courses/ub-program')}}>UB Program</span>
                         </div>
                         <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
