@@ -19,8 +19,8 @@ const Courses = () => {
                     </div>
                     <div className="text-center w-[140px]">
                         <img src="/images/icons/community_network.svg" className="w-24 mx-auto" alt="start date" />
-                        <h5 className="text-2xl text-primary font-semibold">Start Date</h5>
-                        <p className="text-secondary">{course.end_date}</p>
+                        <h5 className="text-2xl text-primary font-semibold">100% Online</h5>
+                        <p className="text-secondary">On-Campus</p>
                     </div>
                 </div>
                 <div className="news-other-card flex flex-col lg:flex-row justify-between items-center p-6 w-auto md:w-[800px]">
