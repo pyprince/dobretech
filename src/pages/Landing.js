@@ -37,36 +37,47 @@ export default function Landing() {
             {/* Course List */}
             <div className="landing-courses">
                 <div className="flex flex-col sm:flex-row justify-center text-white">
-                    <div className="text-center p-5 sm:w-[33.3%]">
-                        <div className="py-5">
-                            <img src="/images/icons/cloud.svg" className="mx-auto" alt="cloud" />
-                        </div>
-                        <div className="text-2xl py-1 cursor-pointer">
-                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>Cloud Computing</span>
-                        </div>
-                        <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
-                        <div className="py-1">6 Months - 3 Sessions</div>
-                    </div>
-                    <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
-                    <div className="text-center p-5 sm:w-[33.3%]">
+                    <div className="text-center p-5 sm:w-[24.9%]">
                         <div className="py-5">
                             <img src="/images/icons/whitehat_hacker.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
-                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Cybersecurity</span>
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Network Security Engineer</span>
                         </div>
-                        <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
+                        <div className="py-1 text-[18px] sm:text-[14px] md:text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
                     <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
-                    <div className="text-center p-5 sm:w-[33.3%]">
+                    <div className="text-center p-5 sm:w-[24.9%]">
                         <div className="py-5">
                             <img src="/images/icons/ub_program.svg" className="mx-auto" alt="cloud" />
                         </div>
-                        <div className="text-2xl py-1">
-                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/ub-program')}}>UB Program</span>
+                        <div className="text-2xl py-1 cursor-pointer">
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Cybersecurity SOC Analyst</span>
                         </div>
-                        <div className="py-1 text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
+                        <div className="py-1 text-[18px] sm:text-[14px] md:text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
+                        <div className="py-1">6 Months - 3 Sessions</div>
+                    </div>
+                    <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
+                    <div className="text-center p-5 sm:w-[24.9%]">
+                        <div className="py-5">
+                            <img src="/images/icons/cloud.svg" className="mx-auto" alt="cloud" />
+                        </div>
+                        <div className="text-2xl py-1">
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>AWS Cloud Engineer</span>
+                        </div>
+                        <div className="py-1 text-[18px] sm:text-[14px] md:text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
+                        <div className="py-1">6 Months - 3 Sessions</div>
+                    </div>
+                    <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
+                    <div className="text-center p-5 sm:w-[24.9%]">
+                        <div className="py-5">
+                            <img src="/images/icons/cloud.svg" className="mx-auto" alt="cloud" />
+                        </div>
+                        <div className="text-2xl py-1 cursor-pointer">
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>Azure Cloud Engineer</span>
+                        </div>
+                        <div className="py-1 text-[18px] sm:text-[14px] md:text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
                     </div>
                 </div>
@@ -166,23 +177,23 @@ export default function Landing() {
                         <p className="mt-10 pr-8">
                             Our vision is to build a highly competitive and effective training provider that will become the number one choice for both individuals and corporate organizations in Cameroon, Africa and to the Globe. Join our new session. If you have any feel free to contact us.
                         </p>
-                        <div className="flex py-6 gap-5">
+                        <div className="flex flex-col sm:flex-row py-6">
                             <div className="w-[40%] lg:w-[50%] xl:w-[40%]">
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 py-1">
                                     <img src="/images/icons/confirmed.svg" alt="confirmed" />
                                     <p className="text-secondary">Reliable and the best</p>
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 py-1">
                                     <img src="/images/icons/confirmed.svg" alt="confirmed" />
                                     <p className="text-secondary">Onsite/classroom/offline delivery modes</p>
                                 </div>
                             </div>
                             <div className="w-[40%]">
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 py-1">
                                     <img src="/images/icons/confirmed.svg" alt="confirmed" />
                                     <p className="text-secondary">Expert tutor</p>
                                 </div>
-                                <div className="flex items-center gap-2">
+                                <div className="flex items-center gap-2 py-1">
                                     <img src="/images/icons/confirmed.svg" alt="confirmed" />
                                     <p className="text-secondary">Affordable</p>
                                 </div>
@@ -202,7 +213,7 @@ export default function Landing() {
                 </div>
             </div>
             <div className="py-2 max-w-[800px] mx-auto text-center text-secondary">
-                With the help of teachers and the environment as the third teacher, studentshave
+                With the help of teachers and the environment as the third teacher, students have
                 opportunities to confidently take risks.
             </div>
             <div className="flex flex-wrap mt-16 px-12 gap-16 justify-center">
@@ -225,7 +236,7 @@ export default function Landing() {
             {/* review */}
             <div className="flex justify-center text-4xl font-semibold py-1">
                 <div className="text-center relative">
-                    What Our <span className="text-tomato">Students</span> Says About
+                    What Our <span className="text-tomato">Students</span> Says About Us!
                     {/* <img src="/images/icons/curved_line.svg" alt="saucy curved" className="absolute right-0" /> */}
                 </div>
             </div>

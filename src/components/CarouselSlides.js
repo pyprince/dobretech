@@ -6,13 +6,12 @@ const CarouselSlide1 = () => {
     return (
         <div className="relative text-white text-left">
             <img src="/images/landing_carousel_1.png" alt="carousel" className="" />
-            <div className="absolute top-[15%] left-[8%]">
-                <h2 className="text-xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold">{landing.carousel.welcome}</h2>
-                <div className="text-xs sm:text-base md:text-xl py-2 sm:py-5">
-                    <div className="py-1 sm:py-2">{landing.carousel.content1[0]}</div>
-                    <div className="py-1 sm:py-2">{landing.carousel.content1[1]}</div>
+            <div className="absolute top-[2%] sm:top-[15%] left-[8%]">
+                <h2 className="text-[14px] sm:text-4xl lg:text-5xl xl:text-6xl font-semibold">{landing.carousel.welcome}</h2>
+                <div className="text-[10px] sm:text-base md:text-xl py-2 sm:py-5">
+                    {landing.carousel.content1.map((text, i) => <div className="" key={i}>{text}</div>)}
                 </div>
-                <Link to='/aboutus' className="inline-block text-sm sm:text-base lg:text-xl  sm:mt-[10%] px-3 sm:px-10 py-1 sm:py-2 border-2 rounded-md sm:rounded-xl">About</Link>
+                <Link to='/aboutus' className="hidden sm:inline-block text-[10px] sm:text-base lg:text-xl  lg:mt-[10%] px-3 sm:px-10 sm:py-2 border-2 rounded-md sm:rounded-xl">About</Link>
             </div>
             <div className="absolute left-[30%] lg:left-[40%] bottom-1 sm:bottom-12 lg:bottom-24 xl:bottom-36 flex gap-2 lg:gap-6">
                 <div className="h-[60px] sm:h-[120px] md:h-[180px]">
@@ -44,9 +43,7 @@ const CarouselSlide2 = () => {
             <div className="relative mt-[5%] sm:mt-[10%] ml-[5%] z-10">
                 <h2 className="text-xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold">{landing.carousel.welcome}</h2>
                 <div className="text-secondary text-xs sm:text-base md:text-xl py-2 sm:py-5">
-                    <div className="py-1">{landing.carousel.content2[0]}</div>
-                    <div className="py-1">{landing.carousel.content2[1]}</div>
-                    <div className="py-1">{landing.carousel.content2[1]}</div>
+                    {landing.carousel.content2.map((text, i) => <div className="py-1" key={i}>{text}</div>)}
                 </div>
                 <Link to='/services' className="inline-block bg-tomato text-white text-[12px] sm:text-base  sm:mt-[6%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md z-10">Consulting Services</Link>
             </div>
@@ -66,11 +63,7 @@ const CarouselSlide3 = () => {
             <div className="relative w-[60%] mt-[3%] sm:mt-[8%] ml-[2%] sm:ml-[5%] z-10 px-2 sm:px-5">
                 <h2 className="text-sm sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl font-semibold">{landing.carousel.commit}</h2>
                 <div className="text-secondary text-[10px] sm:text-base md:text-xl py-2 md:py-3">
-                    <div className="">{landing.carousel.content3[0]}</div>
-                    <div className="">{landing.carousel.content3[1]}</div>
-                    <div className="">{landing.carousel.content3[2]}</div>
-                    <div className="">{landing.carousel.content3[3]}</div>
-                    <div className="">{landing.carousel.content3[4]}</div>
+                    {landing.carousel.content3.map((text, i) => <div key={i}>{text}</div>)}
                 </div>
                 <div className="text-right pr-12">
                     {/* <Link to='/news' className="hidden sm:inline-block bg-tomato text-white text-[12px] md:text-base mt-[-3%] md:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md ml-auto">Explore Our Courses</Link> */}
@@ -85,8 +78,7 @@ const CarouselSlide4 = () => {
             <div className="relative mt-[5%] sm:mt-[10%] ml-[5%] z-10">
                 <h2 className="text-base sm:text-4xl lg:text-5xl xl:text-6xl font-semibold">{landing.carousel.linking}</h2>
                 <div className="text-secondary text-xs sm:text-base md:text-xl py-2 sm:py-5">
-                    <div className="py-1">{landing.carousel.content4[0]}</div>
-                    <div className="py-1">{landing.carousel.content4[1]}</div>
+                    {landing.carousel.content4.map((text, i) => <div className="py-1" key={i}>{text}</div>)}
                 </div>
                 <div className="mt-[10%] sm:mt-0">
                     {/* <Link to='/news' className="inline-block bg-primary text-white text-[12px] sm:text-base  sm:mt-[10%] px-3 sm:px-5 py-1 sm:py-2 rounded-md z-10">Career Path Coureses</Link>

@@ -106,24 +106,32 @@ export const landing = {
         commit: 'Committed in Delivering, Quality and Effective Training',
         linking: 'Linking you to the Future',
         content1: [
-            'Partner to Offer Career Hands-on Training in',
-            'Cyber Security & Cloud Computing'
+            'Partner with the University of Buea to Offer Career Hands-on Training in',
+            'Cyber Security & Cloud Computing',
+            'Features Include',
+            '- Career Coaching and Interview Prep',
+            '- Online Learning Portal',
+            ' - Physical & Cloud Base Lab Access',
+            '- Vendors Study Guide provided',
+            ' - Practice Exam Questions'
         ],
         content2: [
             'Leading Expert IT Training We provides the best',
             'We build trusted relationship',
-            'Train and get certify'
+            'We provides the best'
         ],
         content3: [
             'Aspire for more',
-            'Get Train on top technologies',
+            'Get Trained on top technologies',
             'Get in-demand skills',
-            'Get Certify and be Recognized',
+            'Get Certified and be Recognized',
             'Learning keeps you in the lead',
         ],
         content4: [
             'GAIN IN-DEMAND SKILLS WITH EXPERT',
-            'LED IT COURSES',
+            'LED IT TRAINING COURSES',
+            'ZERO TECH SKILLS? NO PROBLEM! WE TRAIN YOU',
+            'FROM SCRATCH!'
         ],
         batch_notification: [
             '2nd Batch, Starting October',
