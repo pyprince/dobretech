@@ -6,7 +6,6 @@ const Courses = () => {
     const [page, setPage] = useState(0);
     const {course_type} = useParams();
     const course = courses[course_type.replace('-', '_')];
-    console.log(course)
     return (
         <div className="max-w-[1400px] mx-auto">
             <h1 className="text-3xl sm:text-5xl text-primary text-center font-semibold mt-20 px-2">Future Tech - {course.title}</h1>
@@ -51,10 +50,10 @@ const Courses = () => {
                     </div>}
                     <div className="flex items-center gap-3 text-secondary font-semibold py-3">
                         <span className="bg-primary rounded-full w-3 h-3"></span>
-                        <h6 className={`cursor-pointer ${page === 2 ? 'text-tomato text-xl':'text-secondary'}`} onClick={() => setPage(2)}>Goals</h6>
+                        <h6 className={`cursor-pointer ${page === 2 ? 'text-tomato text-xl':'text-secondary'}`} onClick={() => setPage(2)}>Certification Covered</h6>
                     </div>
                     {page === 2 && <div className="news-other-card text-secondary block md:hidden p-5 my-5 max-w-[500px]">
-                        <p className="p-1" dangerouslySetInnerHTML={{__html: course.goal}}></p>
+                        <p className="p-1" dangerouslySetInnerHTML={{__html: course.covered}}></p>
                     </div>}
                     <div className="flex items-center gap-3 text-secondary font-semibold py-3">
                         <span className="bg-primary rounded-full w-3 h-3"></span>
@@ -86,7 +85,7 @@ const Courses = () => {
                     <p className="p-1" dangerouslySetInnerHTML={{__html: course.curriculum}}></p>
                 </div>}
                 {page === 2 && <div className="news-other-card text-secondary hidden md:block p-5 my-5 w-[700px]">
-                    <p className="p-1" dangerouslySetInnerHTML={{__html: course.goal}}></p>
+                    <p className="p-1" dangerouslySetInnerHTML={{__html: course.covered}}></p>
                 </div>}
                 {page === 3 && <div className="news-other-card text-secondary hidden md:block p-5 my-5 w-[700px]">
                     <p className="p-1" dangerouslySetInnerHTML={{__html: course.requirements}}></p>

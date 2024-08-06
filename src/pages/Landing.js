@@ -39,10 +39,10 @@ export default function Landing() {
                 <div className="flex flex-col sm:flex-row justify-center text-white">
                     <div className="text-center p-5 sm:w-[24.9%]">
                         <div className="py-5">
-                            <img src="/images/icons/whitehat_hacker.svg" className="mx-auto" alt="cloud" />
+                            <img src="/images/icons/network_security.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
-                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Network Security Engineer</span>
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/network-security')}}>Network Security Engineer</span>
                         </div>
                         <div className="py-1 text-[18px] sm:text-[14px] md:text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
@@ -50,7 +50,7 @@ export default function Landing() {
                     <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
                     <div className="text-center p-5 sm:w-[24.9%]">
                         <div className="py-5">
-                            <img src="/images/icons/ub_program.svg" className="mx-auto" alt="cloud" />
+                            <img src="/images/icons/cybersecurity.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
                             <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cybersecurity')}}>Cybersecurity SOC Analyst</span>
@@ -61,10 +61,10 @@ export default function Landing() {
                     <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
                     <div className="text-center p-5 sm:w-[24.9%]">
                         <div className="py-5">
-                            <img src="/images/icons/cloud.svg" className="mx-auto" alt="cloud" />
+                            <img src="/images/icons/aws.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1">
-                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>AWS Cloud Engineer</span>
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/aws-engineer')}}>AWS Cloud Engineer</span>
                         </div>
                         <div className="py-1 text-[18px] sm:text-[14px] md:text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
@@ -72,10 +72,10 @@ export default function Landing() {
                     <img src="/images/vertical_line.png" className="w-[2px] h-[70px] self-center sm:w-auto sm:h-auto sm:self-stretch" alt="line" />
                     <div className="text-center p-5 sm:w-[24.9%]">
                         <div className="py-5">
-                            <img src="/images/icons/cloud.svg" className="mx-auto" alt="cloud" />
+                            <img src="/images/icons/azure.svg" className="mx-auto" alt="cloud" />
                         </div>
                         <div className="text-2xl py-1 cursor-pointer">
-                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/cloud-computing')}}>Azure Cloud Engineer</span>
+                            <span className="cursor-pointer hover:text-tomato hover:font-semibold" onClick={() => {navigate('/courses/azure-engineer')}}>Azure Cloud Engineer</span>
                         </div>
                         <div className="py-1 text-[18px] sm:text-[14px] md:text-[18px]">University of Buea Intensive Hands-on IT Career Training</div>
                         <div className="py-1">6 Months - 3 Sessions</div>
@@ -178,20 +178,20 @@ export default function Landing() {
                             Our vision is to build a highly competitive and effective training provider that will become the number one choice for both individuals and corporate organizations in Cameroon, Africa and to the Globe. Join our new session. If you have any feel free to contact us.
                         </p>
                         <div className="flex flex-col sm:flex-row py-6">
-                            <div className="w-[40%] lg:w-[50%] xl:w-[40%]">
+                            <div className="w-[30%] lg:w-[40%] xl:w-[30%]">
                                 <div className="flex items-center gap-2 py-1">
                                     <img src="/images/icons/confirmed.svg" alt="confirmed" />
-                                    <p className="text-secondary">Reliable and the best</p>
+                                    <p className="text-secondary">Reliable</p>
                                 </div>
                                 <div className="flex items-center gap-2 py-1">
                                     <img src="/images/icons/confirmed.svg" alt="confirmed" />
-                                    <p className="text-secondary">Onsite/classroom/offline delivery modes</p>
+                                    <p className="text-secondary">Onsite/On-campus</p>
                                 </div>
                             </div>
                             <div className="w-[40%]">
                                 <div className="flex items-center gap-2 py-1">
                                     <img src="/images/icons/confirmed.svg" alt="confirmed" />
-                                    <p className="text-secondary">Expert tutor</p>
+                                    <p className="text-secondary">Experience</p>
                                 </div>
                                 <div className="flex items-center gap-2 py-1">
                                     <img src="/images/icons/confirmed.svg" alt="confirmed" />
@@ -228,9 +228,9 @@ export default function Landing() {
                     height="400" 
                     src="https://www.youtube.com/embed/Vv24lm9VvRA" 
                     title="YouTube video player" 
-                    frameborder="0" 
+                    frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
+                    allowFullScreen>
                 </iframe>
             </div>
             {/* review */}
