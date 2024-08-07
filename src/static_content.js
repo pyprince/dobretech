@@ -193,7 +193,7 @@ export const landing = {
         {
             title: 'Corporate & Career Training',
             text: `Dobretech offers state-of-the-art training in the highly specialized fields of IT. Our expert teams provide new knowledge and insight in training programs covering a wide range of specialized areas.`,
-            image: 'CAREER.jpg',
+            image: 'Career.jpg',
             link: '/'
         },
         {

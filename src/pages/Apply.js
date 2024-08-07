@@ -8,9 +8,9 @@ import 'react-calendar/dist/Calendar.css';
 
 const country_names = countries.map(country => country.name);
 const genders = ['Male', 'Female'];
-const programs = ['Cloud Computing', 'Cybersecurity', 'UB Program'];
+const programs = ['Network Security Engineer', 'Cybersecurity SOC Analyst', 'AWS Cloud Engineer', 'Azure Cloud Engineer'];
 const dates = ['October 2024', 'November 2024', 'Feburary 2025'];
-const payment_methods = ['Paypal','Stripe', 'Moon Pay'];
+const payment_methods = ['Paypal','Stripe', 'Mobile Money', 'Pay Later'];
 
 const Apply = () => {
     const [validation, setValidation] = useState({
@@ -139,7 +139,7 @@ const Apply = () => {
         
         validateInfo();
         
-        if (flag && payment_method === 'Moon Pay') {
+        if (flag) {
             const applyData = {
                 firstName,
                 lastName,
@@ -171,9 +171,12 @@ const Apply = () => {
             })
             .then(data => {
                 setLoading(false);
-                toast.success("You are successfully applied.");
-                setTimeout(() => window.location.href = 'http://64.23.179.182/send-money', 500);
-
+                if(payment_method === 'Mobile Money') {
+                    toast.success("You are successfully applied.");
+                    setTimeout(() => window.location.href = 'http://64.23.179.182/send-money', 500);
+                }
+                else
+                    toast.success("You are successfully applied. Please pay with Mobile Money.");
             })
             .catch(err => {
                 setLoading(false);
