@@ -269,7 +269,10 @@ const Apply = () => {
                     <div className="text-center mt-6">
                         <button className="bg-tomato text-white mx-auto px-10 py-2 rounded-md active:text-primary" onClick={() => {}}>Download Admission Steps</button>
                     </div><div className="text-center mt-6">
-                        <Link to='/DobreTech Programs.pdf' target="__BLANK" className="text-primary mx-auto px-10 py-2 rounded-md hover:text-tomato underline font-semibold">Programs Overview</Link>
+                        {/* <Link to='/DobreTech Programs.pdf' target="__BLANK" className="text-primary mx-auto px-10 py-1 rounded-md hover:text-tomato hover:border-tomato border border-primary">Programs Overview</Link> */}
+                        <a href='/DobreTech Programs.pdf' download="DobreTech Programs.pdf">
+                            <button  className="text-primary mx-auto px-7 py-1 rounded-md hover:text-tomato hover:border-tomato border border-primary">Download Programs Overview</button>
+                        </a>
                     </div>
                 </div>
             </div>
