@@ -117,9 +117,9 @@ export const landing = {
         ],
         content2: [
             'Leading Expert IT Training', 
-            // 'We provides the best',
+            // 'We provide the best',
             'We build trusted relationship',
-            'We provides the best'
+            'We provide the best'
         ],
         content3: [
             'Aspire for more',
