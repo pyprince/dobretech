@@ -33,7 +33,7 @@ export default function Landing() {
                 </Carousel>
                 <div className="absolute bottom-[5%] right-[3%] z-10">
                     {/* <img src="/images/icons/chat.svg" className="w-[30px] sm:w-auto z-10 cursor-pointer mx-auto" onClick={openModal} alt="chat icon" /> */}
-                    <div className="bg-primary text-center text-white text-[12px] font-semibold sm:text-sm md:text-xl cursor-pointer p-2 rounded active:text-tomato"  onClick={openModal}>Contact with Us</div>
+                    <div className="bg-primary text-center text-white text-[12px] font-semibold sm:text-sm md:text-xl cursor-pointer p-2 rounded active:text-tomato"  onClick={openModal}>Contact Us</div>
                 </div>
             </div>
             <Modal isOpen={isModalOpen} onClose={closeModal} />
