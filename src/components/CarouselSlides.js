@@ -11,7 +11,7 @@ const CarouselSlide1 = () => {
                 <div className="text-[10px] sm:text-base md:text-xl py-2 sm:py-5">
                     {landing.carousel.content1.map((text, i) => <div className="" key={i}>{text}</div>)}
                 </div>
-                <Link to='/aboutus' className="hidden sm:inline-block text-[10px] sm:text-base lg:text-xl  lg:mt-[10%] px-3 sm:px-10 sm:py-2 border-2 rounded-md sm:rounded-xl">About</Link>
+                <Link to='/aboutus' className="inline-block text-[10px] sm:text-base lg:text-xl  lg:mt-[10%] px-3 sm:px-10 sm:py-2 border-2 rounded-md sm:rounded-xl">About</Link>
             </div>
             <div className="absolute left-[30%] lg:left-[40%] bottom-1 sm:bottom-12 lg:bottom-24 xl:bottom-36 flex gap-2 lg:gap-6">
                 <div className="h-[60px] sm:h-[120px] md:h-[180px]">

@@ -9,7 +9,7 @@ import 'react-calendar/dist/Calendar.css';
 const country_names = countries.map(country => country.name);
 const genders = ['Male', 'Female'];
 const programs = ['Network Security Engineer', 'Cybersecurity SOC Analyst', 'AWS Cloud Engineer', 'Azure Cloud Engineer'];
-const dates = ['October 2024', 'November 2024', 'Feburary 2025'];
+const dates = ['October 2024', 'April 2025', 'October 2025'];
 const payment_methods = ['Paypal','Stripe', 'Mobile Money', 'Pay Later'];
 
 const Apply = () => {
@@ -91,6 +91,9 @@ const Apply = () => {
     const dateRef = useRef();
     const paymentMethodRef = useRef();
 
+    const firstNameRegex = /^[A-Za-z\s]+$/;
+    const lastNameRegex = /^[A-Za-z\s]+$/;
+    const phoneRegex = /^(?:\+?[\d\s()]*[\d]|[\d][\d\s()]*[\d])$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const validateField = (ref, setValidationFunc) => {
@@ -98,10 +101,10 @@ const Apply = () => {
     }
 
     const validateInfo = () => {
-        validateField(firstNameRef, setFirstNameValidation);
-        validateField(lastNameRef, setLastNameValidation);
+        setFirstNameValidation(firstNameRegex.test(firstNameRef.current.value));
+        setLastNameValidation(lastNameRegex.test(lastNameRef.current.value));
         setEmailValidation(emailRegex.test(emailRef.current.value));
-        validateField(phoneRef, setPhoneValidation);
+        setPhoneValidation(phoneRegex.test(phoneRef.current.value));
         validateField(addressRef, setAddressValidation);
         validateField(genderRef, setGenderValidation);
         validateField(countryRef, setCountryValidation);
@@ -203,12 +206,12 @@ const Apply = () => {
             <div className="flex flex-wrap justify-center items-center gap-10 p-10 mb-10">
                 <form className="flex flex-col sm:gap-5 w-[600px] apply-form">
                     <div className="sm:flex flex-wrap justify-center sm:justify-between">
-                        <TextInputElement type='text' placeholder='First Name' isValid={validation.firstName} elementRef={firstNameRef} />
-                        <TextInputElement type='text' placeholder='Last Name' isValid={validation.lastName} elementRef={lastNameRef} />
+                        <TextInputElement type='text' name='first name' placeholder='First Name' isValid={validation.firstName} elementRef={firstNameRef} />
+                        <TextInputElement type='text' name='last name' placeholder='Last Name' isValid={validation.lastName} elementRef={lastNameRef} />
                     </div>
                     <div className="sm:flex flex-wrap justify-center sm:justify-between">
-                        <TextInputElement type='email' placeholder='Email' isValid={validation.email} elementRef={emailRef} required />
-                        <TextInputElement type='text' placeholder='Phone' isValid={validation.phone} elementRef={phoneRef} />
+                        <TextInputElement type='email' name='email address' placeholder='Email' isValid={validation.email} elementRef={emailRef} required />
+                        <TextInputElement type='text' name='phone number' placeholder='Phone' isValid={validation.phone} elementRef={phoneRef} />
                     </div>
                     <div className="sm:flex flex-wrap justify-center sm:justify-between">
                         <div>
@@ -271,13 +274,14 @@ const Apply = () => {
     )
 };
 
-const TextInputElement = ({type, elementRef, placeholder, isValid}) => {
+const TextInputElement = ({type, name='', elementRef, placeholder, isValid}) => {
     let validationText = 'This field is required!';
-    if(type === 'email') validationText = 'Please enter valid email address.';
+    if(name === 'email address' || name === 'first name' || name === 'last name' || name === 'phone number') 
+        validationText = `Please enter valid ${name}.`;
     return (
         <div className="py-2">
             <div className="apply-form-input sm:w-[280px] rounded-md">
-                <input type={type} placeholder={placeholder} ref={elementRef} className="w-full h-12 outline-none text-black px-4 rounded-md" />
+                <input type={type} name={name} placeholder={placeholder} ref={elementRef} className="w-full h-12 outline-none text-black px-4 rounded-md" />
             </div>
             {!isValid && <div className="text-red-500 text-sm px-4 pt-1">{validationText}</div>}
         </div>
