@@ -129,10 +129,10 @@ const Apply = () => {
         const payment_method = paymentMethodRef.current.value;
         
         let flag = true;
-        if(!firstName) flag = false;
-        if(!lastName) flag = false;
-        if(!email) flag = false;
-        if(!phone) flag = false;
+        if(!firstNameRegex.test(firstNameRef.current.value)) flag = false;
+        if(!lastNameRegex.test(lastNameRef.current.value)) flag = false;
+        if(!emailRegex.test(emailRef.current.value)) flag = false;
+        if(!phoneRegex.test(phoneRef.current.value)) flag = false;
         if(!birthDate) flag = false;
         if(!address) flag = false;
         if(!gender) flag = false;
