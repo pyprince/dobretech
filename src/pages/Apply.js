@@ -10,7 +10,7 @@ const country_names = countries.map(country => country.name);
 const genders = ['Male', 'Female'];
 const programs = ['Network Security Engineer', 'Cybersecurity SOC Analyst', 'AWS Cloud Engineer', 'Azure Cloud Engineer'];
 const dates = ['October 2024', 'April 2025', 'October 2025'];
-const payment_methods = ['Mobile Money'];
+const payment_methods = ['Mobile Money', 'Pay Later'];
 
 const Apply = () => {
     const [validation, setValidation] = useState({
