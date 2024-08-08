@@ -89,7 +89,7 @@ const Apply = () => {
     const countryRef = useRef();
     const programRef = useRef();
     const dateRef = useRef();
-    const paymentMethodRef = useRef();
+    // const paymentMethodRef = useRef();
 
     const firstNameRegex = /^[A-Za-z\s]+$/;
     const lastNameRegex = /^[A-Za-z\s]+$/;
@@ -110,7 +110,7 @@ const Apply = () => {
         validateField(countryRef, setCountryValidation);
         validateField(programRef, setProgramValidation);
         if(birthDate) setBirthDateValidation(true); else setBirthDateValidation(false);
-        validateField(paymentMethodRef, setPaymentMethodValidation);
+        // validateField(paymentMethodRef, setPaymentMethodValidation);
     }
 
     const handleSubmit = (e) => {
@@ -125,7 +125,7 @@ const Apply = () => {
         const country = countryRef.current.value;
         const program = programRef.current.value;
         const date = dateRef.current.value;
-        const payment_method = paymentMethodRef.current.value;
+        const payment_method = 'Mobile Money';
         
         let flag = true;
         if(!firstNameRegex.test(firstNameRef.current.value)) flag = false;
@@ -239,9 +239,12 @@ const Apply = () => {
                     <div>
                         <SelectElement values={dates} elementRef={dateRef} isValid={validation.date} width={'100%'} />
                     </div>
-                    <div>
-                        <SelectElement values={payment_methods} placeholder='Select Registration Fee Payment Methods' elementRef={paymentMethodRef} isValid={validation.paymentMethod} width={'100%'} />
+                    <div className="apply-form-input px-5 py-2 rounded-md text-black">
+                        Payment Method: Mobile Money
                     </div>
+                    {/* <div>
+                        <SelectElement values={payment_methods} placeholder='Select Registration Fee Payment Methods' elementRef={paymentMethodRef} isValid={validation.paymentMethod} width={'100%'} />
+                    </div> */}
                     <div className="mt-8 self-center">
                         <button className="bg-primary relative text-white font-semibold rounded-md px-20 py-2 active:text-tomato" onClick={(e) => handleSubmit(e)}>
                             Apply
