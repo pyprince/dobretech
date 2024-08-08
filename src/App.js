@@ -31,17 +31,18 @@ function App() {
           <Route exact path='/' element={<Landing />} />
           <Route exact path='/services' element={<Services />} />
           <Route exact path='/aboutus' element={<AboutUs />} />
-          <Route exact path='/apply' element={<Apply />} />
+          <Route exact path='/registration' element={<Apply />} />
           <Route exact path='/news' element={<News />} />
           <Route exact path='/news/:id' element={<NewsDetail />} />
           <Route exact path='/community' element={<Community />} />
           <Route exact path='/community/events/:id' element={<EventDetail />} />
           <Route exact path='/courses/:course_type' element={<Courses />} />
-          <Route exact path='/training' element={<Dummy />} />
+          <Route exact path='*' element={<Dummy />} />
+          {/* <Route exact path='/training' element={<Dummy />} />
           <Route exact path='/faqs' element={<Dummy />} />
           <Route exact path='/intro' element={<Dummy />} />
           <Route exact path='/privacypolicy' element={<Dummy />} />
-          <Route exact path='/termsandconditions' element={<Dummy />} />
+          <Route exact path='/termsandconditions' element={<Dummy />} /> */}
         </Routes>
         <Footer />
       </Router>

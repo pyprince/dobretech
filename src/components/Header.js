@@ -45,7 +45,7 @@ const Header = () => {
                 <Link to='/news' className='w-[20px]'>
                     <img src='/images/icons/notification.svg' alt='notification' className='w-full' />
                 </Link>
-                <button className='hidden sm:block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => navigate('/apply')}>Apply now</button>
+                <button className='hidden sm:block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => navigate('/registration')}>Apply now</button>
                 <button className='sm:hidden button text-white ml-2 w-[25px]' onClick={handleMenuClick}>
                     <img src='/images/icons/menu.svg' className='w-full h-full' alt='menu' />
                 </button>
@@ -55,7 +55,7 @@ const Header = () => {
                             <Link to={link.path} className={location.pathname === link.path ? 'text-[#26FFDA]' : 'text-white'} onClick={() => setOpen(false)} key={i}>{link.title}</Link>
                         ))}
                     </div>
-                    <button className='block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => {navigate('/apply'); setOpen(false)}}>Apply now</button>
+                    <button className='block signup-button button text-white font-semibold px-6 py-2 rounded-lg active:text-tomato' onClick={() => {navigate('/registration'); setOpen(false)}}>Apply now</button>
                 </div>}
             </div>
         </div>

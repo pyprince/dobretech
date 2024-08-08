@@ -71,7 +71,7 @@ export const footer = {
         },
         {
             title: 'Apply Now',
-            path: '/apply'
+            path: '/registration'
         },
         {
             title: 'Career',

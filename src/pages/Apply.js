@@ -1,5 +1,4 @@
 import React, {useState, useRef} from "react";
-import { Link } from "react-router-dom";
 import DatePicker from "react-date-picker";
 import { toast } from "react-toastify";
 import countries from "../countries";
@@ -11,7 +10,7 @@ const country_names = countries.map(country => country.name);
 const genders = ['Male', 'Female'];
 const programs = ['Network Security Engineer', 'Cybersecurity SOC Analyst', 'AWS Cloud Engineer', 'Azure Cloud Engineer'];
 const dates = ['October 2024', 'April 2025', 'October 2025'];
-const payment_methods = ['Paypal','Stripe', 'Mobile Money', 'Pay Later'];
+const payment_methods = ['Mobile Money'];
 
 const Apply = () => {
     const [validation, setValidation] = useState({
@@ -177,7 +176,8 @@ const Apply = () => {
                 setLoading(false);
                 if(payment_method === 'Mobile Money') {
                     toast.success("You are successfully applied.");
-                    setTimeout(() => window.location.href = 'http://64.23.179.182/send-money', 500);
+                    // setTimeout(() => window.location.href = 'http://64.23.179.182/send-money', 500);
+                    setTimeout(() => window.location.href = 'https://pay.dobretech.com/', 500);
                 }
                 else
                     toast.success("You are successfully applied. Please pay with Mobile Money.");
@@ -272,7 +272,13 @@ const Apply = () => {
                     <div className="text-center mt-6">
                         {/* <Link to='/DobreTech Programs.pdf' target="__BLANK" className="text-primary mx-auto px-10 py-1 rounded-md hover:text-tomato hover:border-tomato border border-primary">Programs Overview</Link> */}
                         <a href='/DobreTech Programs.pdf' download="DobreTech Programs.pdf">
-                            <button className="bg-tomato text-white mx-auto px-10 py-2 rounded-md active:text-primary">Download Programs Overview</button>
+                            <button className="bg-tomato text-white mx-auto px-12 py-2 rounded-md active:text-primary">Download Programs Overview</button>
+                        </a>
+                    </div>
+                    <div className="text-center mt-6">
+                        {/* <Link to='/DobreTech Programs.pdf' target="__BLANK" className="text-primary mx-auto px-10 py-1 rounded-md hover:text-tomato hover:border-tomato border border-primary">Programs Overview</Link> */}
+                        <a href='/UB-DobreTech-IT Career Training Admission Steps Oct 2024.pdf' download="UB-DobreTech-IT Career Training Admission Steps Oct 2024.pdf">
+                            <button className="text-primary mx-auto px-2 py-[6px] border-2 rounded-md border-primary hover:text-tomato hover:border-tomato">Download Admission Steps and Process</button>
                         </a>
                     </div>
                 </div>

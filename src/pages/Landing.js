@@ -85,7 +85,7 @@ export default function Landing() {
                     </div>
                 </div>
                 <div className="pt-4 pb-6 text-center">
-                    <Link to='/apply' className='inline-block bg-white text-primary font-semibold rounded-md px-5 py-3'>Apply Now - Admission Process</Link>
+                    <Link to='/registration' className='inline-block bg-white text-primary font-semibold rounded-md px-5 py-3'>Apply Now - Admission Process</Link>
                 </div>
             </div>
             {/* Features */}

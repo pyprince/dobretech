@@ -26,7 +26,7 @@ const Courses = () => {
                     <p className="text-secondary text-center lg:text-left max-w-[440px]">
                         {course.features.map((feature, i) => <div key={i}>{feature}</div>)}
                     </p>
-                    <Link to='/apply' className="bg-primary px-10 py-2 my-5 rounded-md">Apply Now</Link>
+                    <Link to='/registration' className="bg-primary px-10 py-2 my-5 rounded-md">Apply Now</Link>
                 </div>
             </div>
             <div className="flex justify-center items-center md:gap-16 lg:gap-40 mt-20 max-w-[1400px] mx-auto px-5">
